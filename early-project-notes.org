@@ -28,3 +28,4 @@
 * SRAM Interface
 - SRAM is byte addressable, one cycle delay between address and data
 - When writing to sram, set write_enable to high read_write_select to high
+* Project Flow
