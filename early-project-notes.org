@@ -1,0 +1,30 @@
+#+TITLE: Early Project Notes
+* Task(s)
+- Implement a bitfusion style architecture that can handle multiple levels of precision in a neural network
+- Change arithmetic hardware to match the precision needed in the neural stage
+- Hardware can perform a smaller number of larger multiply-adds per cycle *or* a larger number with smaller words
+- This can save power and area versus the alternative of sizing the arithmetic units for the largest word sizes
+- Test fixture provides three memories:
+  - weight
+  - inputs
+  - results
+- Simplest solution is to implement one or more multiply accumuulate units that support the widest bit width and simply sign extend the narrower inputs
+* Control Interface
+- There will be three control signals for the unit:
+  - input reset_b: active low reset signal -> will clear the machine state
+  - input clk: system clock forwarded from the test fixture
+  - input run: test bench will set run signal high after all data has been loaded
+* Memory Structure
+- Three SRAMS, all of which are 16-bits wide and word addressable:
+  - weight
+  - input
+  - output
+- These memories are packed 16 bit memories -> there will be multiple wieghts or inputs in a 16 bit word if the input or weight 8-bits wide or less:
+  - 2 for 8-bit inputs
+  - 4 for 4-bit inputs
+  - 8 for 2-bit inputs
+- Outputs:
+  - All results are 16-bit words -> use sign extension
+* SRAM Interface
+- SRAM is byte addressable, one cycle delay between address and data
+- When writing to sram, set write_enable to high read_write_select to high
