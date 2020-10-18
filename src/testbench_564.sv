@@ -97,18 +97,18 @@ module tb_top();
           .clock        ( clk                    )
          );
 
-/*		 
+
 //---------------------------------------------------------------------------
 // DUT 
 //---------------------------------------------------------------------------
   MyDesign dut(
 //---------------------------------------------------------------------------
 //Control signals
-          .dut_run             ( dut_run               ), 
+          .dut_run             ( dut_run               ),
           .dut_busy            ( dut_busy              ),
-          .reset_b             ( reset_b                       ),  
+          .reset_b             ( reset_b                       ),
           .clk                 ( clk                         ),
- 
+
 //---------------------------------------------------------------------------
 //input and output SRAM interface
           .dut_sram_write_address  ( dut_sram_write_address    ),
@@ -117,11 +117,11 @@ module tb_top();
           .dut_sram_read_address   ( dut_sram_read_address     ),
           .sram_dut_read_data      ( sram_dut_read_data        ),
 //---------------------------------------------------------------------------
-//weights SRAM interface                                                       
+//weights SRAM interface
           .dut_wmem_read_address    ( dut_wmem_read_address    ),
           .wmem_dut_read_data       ( wmem_dut_read_data       )
          );
-*/
+
      
   //---------------------------------------------------------------------------
   //  clk
