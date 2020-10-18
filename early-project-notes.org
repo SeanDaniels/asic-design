@@ -1,5 +1,6 @@
 #+TITLE: Early Project Notes
 * Task(s)
+- Highes level description: produce hardware that can execute matrix multiplication
 - Implement a bitfusion style architecture that can handle multiple levels of precision in a neural network
 - Change arithmetic hardware to match the precision needed in the neural stage
 - Hardware can perform a smaller number of larger multiply-adds per cycle *or* a larger number with smaller words
@@ -28,4 +29,29 @@
 * SRAM Interface
 - SRAM is byte addressable, one cycle delay between address and data
 - When writing to sram, set write_enable to high read_write_select to high
+* Execution Module
+- Implement multiply, accumulate MAC
+* Relevant Read Information
+- Number of columns in a given matrix is determined by the number of instructions per read
+- Number of rows in a given matrix is determined by the number of reads to get all instructions
+- Data value 'Word Size' is used to determine how many arguments are passed per read
+- Number of rows/ number of reads can be determined with:
+  if Word Size = 16, num_reads = instructions
+  if Word Size = 8, num_reads = instructions>>1
+  if Word Size = 4, num_reads = instructions>>2
+  if Word Size = 2, num_reads = instructions>>3
+** Input
+- 12 instructions, 4-bit word size:
+  - 4 instructions per read (number of columns in array) - word size will need to be used for multiplication
+  - 3 reads to get all instructions (number of rows in array) - 
+- If word size = 16, end address = address + instructions
+- If word size = 8, end address = address + instructions/2 (instructions >> 1)
+- If word size = 4, end address = address + instructions/4 (instructions >> 2)
+- If word size = 2, end address = address + instructions/8 (instructions >> 3)
+- instructions = 24 = 011000, word size = 8, end address = address + 011000 >> 1? 
+  + 011000 >> 1 = 001100 = 12
+- instructions = 24 = 011000, word size = 4, end address = address + 011000 >> 2?
+  - 011000 >> 2 = 000110 =  6
+| i_1 | i_2 | i_3 | i_4 | *row read* | i_5 | i_6 | i_7 | i_8 | *row read* | i_9 | i_10 | i_11 | i_12 | *done* |
+
 * Project Flow
