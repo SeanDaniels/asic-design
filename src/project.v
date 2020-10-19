@@ -18,7 +18,7 @@ module project(
    reg [15:0]                    some_input;
    reg [11:0]                    sram_addr;
    reg [12:0]                    counter = 13'b0;
-   reg [5:0]                     sram_read_count = 5'b0;
+   reg [5:0]                     sram_read_count = 6'b0;
    reg [15:0]                    x;
 
 
@@ -37,10 +37,10 @@ module project(
      begin
         if(current == GET)
           begin
-             sram_read_flag = 1'b1;
+             sram_read_flag <= 1'b1;
              dut_sram_write_enable <= 1'b0;
              sram_dut_read_addr <= sram_read_count;
-             sram_read_count = sram_read_count + 1'b1;
+             sram_read_count <= sram_read_count + 1'b1;
              counter <= counter + 13'b1;
           end
         else if(sram_read_count > 5'd10)

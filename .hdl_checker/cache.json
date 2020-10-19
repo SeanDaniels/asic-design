@@ -1,0 +1,780 @@
+{
+ "builder": {
+  "_version": "<undefined>",
+  "_logger": "hdl_checker.builders.fallback",
+  "_database": {
+   "sources": [
+    {
+     "path": {
+      "name": "/home/swd/asic-design/src/sram.sv",
+      "__class__": "Path"
+     },
+     "mtime": 1603119238.02,
+     "flags": {
+      "source_specific": [],
+      "single": [],
+      "dependencies": []
+     },
+     "dependencies": [
+      {
+       "owner": {
+        "name": "/home/swd/asic-design/src/sram.sv",
+        "__class__": "Path"
+       },
+       "name": {
+        "name": "INFO",
+        "case_sensitive": true,
+        "__class__": "VerilogIdentifier"
+       },
+       "library": null,
+       "locations": [
+        [
+         85,
+         26
+        ]
+       ],
+       "__class__": "RequiredDesignUnit"
+      },
+      {
+       "owner": {
+        "name": "/home/swd/asic-design/src/sram.sv",
+        "__class__": "Path"
+       },
+       "name": {
+        "name": "ERROR",
+        "case_sensitive": true,
+        "__class__": "VerilogIdentifier"
+       },
+       "library": null,
+       "locations": [
+        [
+         77,
+         24
+        ]
+       ],
+       "__class__": "RequiredDesignUnit"
+      },
+      {
+       "owner": {
+        "name": "/home/swd/asic-design/src/sram.sv",
+        "__class__": "Path"
+       },
+       "name": {
+        "name": "INFO",
+        "case_sensitive": true,
+        "__class__": "VerilogIdentifier"
+       },
+       "library": null,
+       "locations": [
+        [
+         80,
+         20
+        ]
+       ],
+       "__class__": "RequiredDesignUnit"
+      }
+     ],
+     "diags": []
+    },
+    {
+     "path": {
+      "name": "/home/swd/asic-design/src/testbench_564.sv",
+      "__class__": "Path"
+     },
+     "mtime": 1603119238.02,
+     "flags": {
+      "source_specific": [],
+      "single": [],
+      "dependencies": []
+     },
+     "dependencies": [
+      {
+       "owner": {
+        "name": "/home/swd/asic-design/src/testbench_564.sv",
+        "__class__": "Path"
+       },
+       "name": {
+        "name": "project.v",
+        "case_sensitive": true,
+        "__class__": "VerilogIdentifier"
+       },
+       "locations": [
+        [
+         0,
+         8
+        ]
+       ],
+       "__class__": "IncludedPath"
+      },
+      {
+       "owner": {
+        "name": "/home/swd/asic-design/src/testbench_564.sv",
+        "__class__": "Path"
+       },
+       "name": {
+        "name": "sram.sv",
+        "case_sensitive": true,
+        "__class__": "VerilogIdentifier"
+       },
+       "locations": [
+        [
+         1,
+         8
+        ]
+       ],
+       "__class__": "IncludedPath"
+      }
+     ],
+     "diags": []
+    },
+    {
+     "path": {
+      "name": "/home/swd/asic-design/src/project.v",
+      "__class__": "Path"
+     },
+     "mtime": 1603123214.92,
+     "flags": {
+      "source_specific": [],
+      "single": [],
+      "dependencies": []
+     },
+     "dependencies": [],
+     "diags": []
+    }
+   ],
+   "inferred_libraries": [
+    {
+     "name": "/tmp/tmp1wub98mv.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmps_syi2gi.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmp65cmyedp.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpctzldxr_.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpxpxdvg7l.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpghqlky80.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpbbtmetij.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpgevqugl1.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpjchw5koo.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpn0_x7a5e.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpmm5a1ko_.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmp331f4u6o.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmp7_vh_hhm.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpijdl0czv.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmp3wbuvyu9.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/home/swd/asic-design/src/project.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpn35l05wj.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/home/swd/asic-design/src/sram.sv",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpnaz73vjl.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmp2h539hw9.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpmeuk7nyt.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmp2j_k8adq.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpfku2agu2.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmp8dc3158e.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpa_c_92hj.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpgo8mmrr7.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmp4brmrvu0.sv",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpuug5lhp0.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmp9l_lovwe.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmp1e6kayge.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpa8sl1lf2.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpgcwp__4q.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpurgjs845.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpae5ygy3s.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpl11ke5b8.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpy34z0zqv.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/home/swd/asic-design/src/testbench_564.sv",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpiz7bo_jg.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpemrhz5fi.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpff_qjtzp.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmphac6n9fi.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmps5b4fyn9.v",
+     "__class__": "Path"
+    },
+    {
+     "name": "/tmp/tmpd2enpyi_.v",
+     "__class__": "Path"
+    }
+   ],
+   "design_units": [
+    {
+     "owner": {
+      "name": "/home/swd/asic-design/src/project.v",
+      "__class__": "Path"
+     },
+     "type_": "entity",
+     "name": {
+      "name": "project",
+      "case_sensitive": true,
+      "__class__": "VerilogIdentifier"
+     },
+     "locations": [
+      [
+       0,
+       6
+      ]
+     ],
+     "__class__": "VerilogDesignUnit"
+    },
+    {
+     "owner": {
+      "name": "/home/swd/asic-design/src/testbench_564.sv",
+      "__class__": "Path"
+     },
+     "type_": "entity",
+     "name": {
+      "name": "tb_top",
+      "case_sensitive": true,
+      "__class__": "VerilogIdentifier"
+     },
+     "locations": [
+      [
+       2,
+       7
+      ]
+     ],
+     "__class__": "VerilogDesignUnit"
+    },
+    {
+     "owner": {
+      "name": "/home/swd/asic-design/src/sram.sv",
+      "__class__": "Path"
+     },
+     "type_": "entity",
+     "name": {
+      "name": "sram",
+      "case_sensitive": true,
+      "__class__": "VerilogIdentifier"
+     },
+     "locations": [
+      [
+       3,
+       7
+      ]
+     ],
+     "__class__": "VerilogDesignUnit"
+    }
+   ],
+   "__class__": "Database"
+  },
+  "_work_folder": "/home/swd/asic-design/.hdl_checker",
+  "_builtin_libraries": [],
+  "_added_libraries": [
+   {
+    "name": "default_library",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   },
+   {
+    "name": "work",
+    "case_sensitive": false,
+    "__class__": "Identifier"
+   }
+  ],
+  "__class__": "Fallback"
+ },
+ "config_file": [
+  {
+   "name": "/tmp/hdl_checker_project_pid1255.json",
+   "__class__": "Path"
+  },
+  1603123827.41,
+  "generated"
+ ],
+ "database": {
+  "sources": [
+   {
+    "path": {
+     "name": "/home/swd/asic-design/src/sram.sv",
+     "__class__": "Path"
+    },
+    "mtime": 1603119238.02,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [
+     {
+      "owner": {
+       "name": "/home/swd/asic-design/src/sram.sv",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "INFO",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "library": null,
+      "locations": [
+       [
+        85,
+        26
+       ]
+      ],
+      "__class__": "RequiredDesignUnit"
+     },
+     {
+      "owner": {
+       "name": "/home/swd/asic-design/src/sram.sv",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "ERROR",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "library": null,
+      "locations": [
+       [
+        77,
+        24
+       ]
+      ],
+      "__class__": "RequiredDesignUnit"
+     },
+     {
+      "owner": {
+       "name": "/home/swd/asic-design/src/sram.sv",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "INFO",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "library": null,
+      "locations": [
+       [
+        80,
+        20
+       ]
+      ],
+      "__class__": "RequiredDesignUnit"
+     }
+    ],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "/home/swd/asic-design/src/testbench_564.sv",
+     "__class__": "Path"
+    },
+    "mtime": 1603119238.02,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [
+     {
+      "owner": {
+       "name": "/home/swd/asic-design/src/testbench_564.sv",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "project.v",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "locations": [
+       [
+        0,
+        8
+       ]
+      ],
+      "__class__": "IncludedPath"
+     },
+     {
+      "owner": {
+       "name": "/home/swd/asic-design/src/testbench_564.sv",
+       "__class__": "Path"
+      },
+      "name": {
+       "name": "sram.sv",
+       "case_sensitive": true,
+       "__class__": "VerilogIdentifier"
+      },
+      "locations": [
+       [
+        1,
+        8
+       ]
+      ],
+      "__class__": "IncludedPath"
+     }
+    ],
+    "diags": []
+   },
+   {
+    "path": {
+     "name": "/home/swd/asic-design/src/project.v",
+     "__class__": "Path"
+    },
+    "mtime": 1603123214.92,
+    "flags": {
+     "source_specific": [],
+     "single": [],
+     "dependencies": []
+    },
+    "dependencies": [],
+    "diags": []
+   }
+  ],
+  "inferred_libraries": [
+   {
+    "name": "/tmp/tmp1wub98mv.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmps_syi2gi.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp65cmyedp.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpctzldxr_.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpxpxdvg7l.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpghqlky80.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpbbtmetij.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpgevqugl1.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpjchw5koo.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpn0_x7a5e.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpmm5a1ko_.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp331f4u6o.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp7_vh_hhm.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpijdl0czv.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp3wbuvyu9.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/home/swd/asic-design/src/project.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpn35l05wj.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/home/swd/asic-design/src/sram.sv",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpnaz73vjl.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp2h539hw9.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpmeuk7nyt.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp2j_k8adq.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpfku2agu2.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp8dc3158e.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpa_c_92hj.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpgo8mmrr7.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp4brmrvu0.sv",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpuug5lhp0.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp9l_lovwe.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmp1e6kayge.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpa8sl1lf2.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpgcwp__4q.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpurgjs845.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpae5ygy3s.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpl11ke5b8.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpy34z0zqv.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/home/swd/asic-design/src/testbench_564.sv",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpiz7bo_jg.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpemrhz5fi.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpff_qjtzp.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmphac6n9fi.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmps5b4fyn9.v",
+    "__class__": "Path"
+   },
+   {
+    "name": "/tmp/tmpd2enpyi_.v",
+    "__class__": "Path"
+   }
+  ],
+  "design_units": [
+   {
+    "owner": {
+     "name": "/home/swd/asic-design/src/project.v",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "project",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      0,
+      6
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "/home/swd/asic-design/src/testbench_564.sv",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "tb_top",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      2,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   },
+   {
+    "owner": {
+     "name": "/home/swd/asic-design/src/sram.sv",
+     "__class__": "Path"
+    },
+    "type_": "entity",
+    "name": {
+     "name": "sram",
+     "case_sensitive": true,
+     "__class__": "VerilogIdentifier"
+    },
+    "locations": [
+     [
+      3,
+      7
+     ]
+    ],
+    "__class__": "VerilogDesignUnit"
+   }
+  ],
+  "__class__": "Database"
+ },
+ "__version__": "0.6.14"
+}
