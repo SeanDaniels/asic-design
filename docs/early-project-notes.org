@@ -31,6 +31,29 @@
 - When writing to sram, set write_enable to high read_write_select to high
 * Execution Module
 - Implement multiply, accumulate MAC
+- output of data path 1 and data path 2 are bit strings
+- let data path 1 output be dp1, controller = control1:
+  
+  | input1 | input2 |
+  | input3 | input4 |
+
+  + 2x2 matrix
+  + dp1 ws = 16>>ws = number of columns
+  + number of rows can be determined from control1
+
+- let data path 2 output be dp2, controller = control2:
+
+  | weight1 |
+  | weight2 |
+
+  + 2x1 matrix
+
+- output of this matrix multiplication is 2x1 matrix
+  | input1*weight1 + input2*weight2 |
+  | input3*weight1 + input4*weight2 |
+
+  
+- num columns can be retrieved from control 1
 * Relevant Read Information
 - Number of columns in a given matrix is determined by the number of instructions per read
 - Number of rows in a given matrix is determined by the number of reads to get all instructions
