@@ -1,14 +1,15 @@
 module project(
+               // control signals
                input wire        clk,
-               input             reset,
+               input             reset_b,
                input wire        dut_run,
                output reg        dut_busy,
-
-               input wire [15:0] sram_read_data,
-               output reg        sram_we,
-               output reg [11:0] sram_read_addr,
-               output reg [11:0] sram_write_addr,
-               output reg [15:0] sram_write_data,
+               // input and output sram
+               input wire [15:0] dut_sram_read_data,
+               output reg        dut_sram_write_enable,
+               output reg [11:0] sram_dut_read_data,
+               output reg [11:0] dut_sram_write_addr,
+               output reg [15:0] dut_sram_write_data
                );
 
    reg                           sram_read_flag;

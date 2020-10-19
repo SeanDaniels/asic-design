@@ -20,13 +20,13 @@ module sram     #(parameter  ADDR_WIDTH      = 32  ,
     //--------------------------------------------------------
     // Associative memory
 
-    bit  [DATA_WIDTH-1 :0  ]     mem     [int]  ;
+    bit  [DATA_WIDTH-1:0] mem[int];
     
     //--------------------------------------------------------
     // RAW and X condition
     
-    reg  [ADDR_WIDTH-1:0   ]     last_write_addr;
-    reg                          last_write_en;
+    reg [ADDR_WIDTH-1:0] last_write_addr;
+    reg last_write_en;
     //--------------------------------------------------------
     // Read
     always @(posedge clock)

@@ -1,3 +1,4 @@
+`include "project.v"
 `include "sram.sv"
 module tb_top();
 
@@ -101,26 +102,22 @@ module tb_top();
 //---------------------------------------------------------------------------
 // DUT 
 //---------------------------------------------------------------------------
-  MyDesign dut(
-//---------------------------------------------------------------------------
-//Control signals
-          .dut_run             ( dut_run               ),
-          .dut_busy            ( dut_busy              ),
-          .reset_b             ( reset_b                       ),
-          .clk                 ( clk                         ),
-
-//---------------------------------------------------------------------------
-//input and output SRAM interface
-          .dut_sram_write_address  ( dut_sram_write_address    ),
-          .dut_sram_write_data     ( dut_sram_write_data       ),
-          .dut_sram_write_enable   ( dut_sram_write_enable     ),
-          .dut_sram_read_address   ( dut_sram_read_address     ),
-          .sram_dut_read_data      ( sram_dut_read_data        ),
-//---------------------------------------------------------------------------
-//weights SRAM interface
-          .dut_wmem_read_address    ( dut_wmem_read_address    ),
-          .wmem_dut_read_data       ( wmem_dut_read_data       )
-         );
+   MyDesign dut(
+                // Control signals
+                .dut_run (dut_run),
+                .dut_busy (dut_busy),
+                .reset_b (reset_b),
+                .clk (clk),
+                //input and output SRAM interface
+                .dut_sram_write_address  (dut_sram_write_address),
+                .dut_sram_write_data     (dut_sram_write_data),
+                .dut_sram_write_enable   (dut_sram_write_enable),
+                .dut_sram_read_address   (dut_sram_read_address),
+                .sram_dut_read_data      (sram_dut_read_data)
+                //weights SRAM interface
+                // .dut_wmem_read_address    (dut_wmem_read_address),
+                // .wmem_dut_read_data       (wmem_dut_read_data)
+                );
 
      
   //---------------------------------------------------------------------------
