@@ -1,0 +1,83 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/swd/intelFPGA_lite/20.1
+vproject
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1603993268
+!i10b 1
+!s100 AoD5F>jXNHC@L^>M1j?@o0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+If]WD;=>?_;aWWYCibm_F21
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/seanw/Desktop/projects/verilog-projets/ece564-project/src
+w1603993194
+8project.v
+Fproject.v
+!i122 32
+L0 1 124
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1603993268.000000
+!s107 sram.sv|project.v|testbench_564.sv|
+Z7 !s90 -reportprogress|300|testbench_564.sv|
+!i113 1
+Z8 tCvgOpt 0
+vsram
+R0
+R1
+!i10b 1
+!s100 ;Q5bR9XgCF`hA6eMg6jn:3
+R2
+IPWjQFVLYTOoI8MYPn07;C1
+R3
+S1
+R4
+w1603225950
+8sram.sv
+Fsram.sv
+!i122 32
+L0 4 90
+R5
+r1
+!s85 0
+31
+R6
+Z9 !s107 sram.sv|project.v|testbench_564.sv|
+R7
+!i113 1
+R8
+vtb_top
+R0
+R1
+!i10b 1
+!s100 _6zFhkjMNSYEokne0Pi>a3
+R2
+I_zUlKnXDklfH;X?TMB@^J2
+R3
+S1
+R4
+w1603753774
+8testbench_564.sv
+Ftestbench_564.sv
+!i122 32
+L0 3 212
+R5
+r1
+!s85 0
+31
+R6
+R9
+R7
+!i113 1
+R8
