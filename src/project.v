@@ -47,7 +47,6 @@ module project(
         main_state_machine_current_state <= (!reset_b) ? RESET_WAIT : main_state_machine_next_state;
         secondary_state_machine_current_state <= secondary_state_machine_next_state;
      end
-
    always@(*)
      begin
         case(main_state_machine_current_state)
