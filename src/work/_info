@@ -11,26 +11,26 @@ cModel Technology
 dC:/Users/swd/intelFPGA_lite/20.1
 vproject
 Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z1 !s110 1603996056
+Z1 !s110 1604011675
 !i10b 1
-!s100 AoD5F>jXNHC@L^>M1j?@o0
+!s100 E2[=mYD7]U4Y;:TZ;0XD03
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-If]WD;=>?_;aWWYCibm_F21
+I@>SbgJ;7VVni?zJ`j^HIB3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 S1
-Z4 d/home/swd/asic-design/src
-w1603993194
+Z4 dC:/Users/Sean/Desktop/projects/verilog-projects/asic-design/src
+w1604011667
 8project.v
 Fproject.v
-!i122 33
-L0 1 124
+!i122 61
+L0 1 140
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1603996056.000000
+Z6 !s108 1604011675.000000
 !s107 sram.sv|project.v|testbench_564.sv|
-Z7 !s90 testbench_564.sv|
+Z7 !s90 -reportprogress|300|testbench_564.sv|
 !i113 1
 Z8 tCvgOpt 0
 vsram
@@ -43,17 +43,17 @@ IPWjQFVLYTOoI8MYPn07;C1
 R3
 S1
 R4
-w1603225950
+Z9 w1603997550
 8sram.sv
 Fsram.sv
-!i122 33
+!i122 61
 L0 4 90
 R5
 r1
 !s85 0
 31
 R6
-Z9 !s107 sram.sv|project.v|testbench_564.sv|
+Z10 !s107 sram.sv|project.v|testbench_564.sv|
 R7
 !i113 1
 R8
@@ -67,17 +67,17 @@ I_zUlKnXDklfH;X?TMB@^J2
 R3
 S1
 R4
-w1603753774
+R9
 8testbench_564.sv
 Ftestbench_564.sv
-!i122 33
+!i122 61
 L0 3 212
 R5
 r1
 !s85 0
 31
 R6
-R9
+R10
 R7
 !i113 1
 R8

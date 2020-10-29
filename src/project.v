@@ -14,17 +14,19 @@ module project(
                input reg [15:0]  sram_dut_read_data
                );
 
-   reg                           sram_read_flag, accumulation_complete, processing_done;
+   reg                           sram_read_flag, accumulation_complete, processing_done, input_read_complete_signal;
    reg [2:0]                     main_state_machine_current_state, main_state_machine_next_state;
-   reg [1:0]                     secondary_state_machine_current_state, secondary_state_machine_next_state;
-   reg [15:0]                    some_input;
-   reg [11:0]                    sram_addr;
+   reg [2:0]                     secondary_state_machine_current_state, secondary_state_machine_next_state;
+   reg [15:0]                    input_input, weight_input;
+   reg [11:0]                    input_sram_addr, weight_sram_addr;
    reg [15:0]                    counter = 16'b0;
    reg [5:0]                     sram_read_count = 6'b0;
-   reg [15:0]                    size_of_inputs = 16'b0;
-   reg [15:0]                    number_of_inputs = 16'b0;
-   reg [15:0]                    number_of_sram_reads;
-   reg [15:0]                    x;
+   reg [4:0]                     number_of_input_reads_needed, number_of_weight_reads_needed;
+   reg [15:0]                    size_of_inputs = 16'b0, size_of_weights = 16'b0;
+   reg [15:0]                    number_of_inputs = 16'b0, number_of_weights = 16'b0;
+   reg [15:0]                    number_of_input_reads, number_of_weight_reads;
+   reg [15:0]                    input_value, weight_value;
+
 
 
 
@@ -37,16 +39,18 @@ module project(
    localparam SYNC = 3'b011; // state 3
    localparam MAIN_STATE_END = 3'b101; // state 5
    //interior sm states
-   localparam GET_NUMBER_OF_INPUTS = 2'b00;
-   localparam GET_SIZE_OF_INPUTS = 2'b01;
-   localparam ACCUM = 2'b10;
-   localparam DONE_ACCUM = 2'b11;
+   localparam SYNC_READ = 3'b000;
+   localparam GET_NUMBER_OF_INPUTS = 3'b001;
+   localparam GET_SIZE_OF_INPUTS = 3'b010;
+   localparam ACCUM = 3'b011;
+   localparam DONE_ACCUM = 3'b100;
 
    always@(posedge clk)
      begin
         main_state_machine_current_state <= (!reset_b) ? RESET_WAIT : main_state_machine_next_state;
         secondary_state_machine_current_state <= secondary_state_machine_next_state;
      end
+
    always@(*)
      begin
         case(main_state_machine_current_state)
@@ -54,13 +58,13 @@ module project(
              // signal used to control reading from memory
              dut_busy = 1'b0;
              main_state_machine_next_state = RUN_WAIT;
-             secondary_state_machine_next_state = GET_NUMBER_OF_INPUTS;
+             secondary_state_machine_next_state = SYNC_READ;
           end
           RUN_WAIT: begin
              if(dut_run) // Message sent from top level module to indicate process start
                begin
                   dut_busy = 1'b1;
-                  number_of_sram_reads = 16'b0;
+                  number_of_input_reads = 16'b0;
                   main_state_machine_next_state = PROCESS;
                end
              else
@@ -90,33 +94,46 @@ module project(
         if(main_state_machine_current_state == PROCESS)
           begin
              dut_sram_write_enable <= 1'b0;
-             case(secondary_state_machine_current_state)
-               GET_NUMBER_OF_INPUTS:begin
-                  number_of_inputs <= some_input;
-                  secondary_state_machine_next_state <= GET_SIZE_OF_INPUTS;
-                  number_of_sram_reads <= number_of_sram_reads + 1;
+             if(number_of_input_reads==1)begin
+                  number_of_inputs <= input_input;
                end
-               GET_SIZE_OF_INPUTS:begin
-                  size_of_inputs <= some_input;
-                  secondary_state_machine_next_state <= ACCUM;
-                  number_of_sram_reads <= number_of_sram_reads + 1;
-               end
-               ACCUM: begin
-                  if(number_of_sram_reads == 100) secondary_state_machine_next_state<=DONE_ACCUM;
-                  x <= some_input;
-                  number_of_sram_reads <= number_of_sram_reads + 1;
-                  end
-               DONE_ACCUM:begin
-                  processing_done = 1'b1;
+             else if(number_of_input_reads==2)begin
+                size_of_inputs <= input_input;
                 end
-             endcase
-          end
+             else if(number_of_input_reads==3) begin
+                if(size_of_inputs==8)begin
+                   number_of_input_reads_needed = number_of_inputs >> 1;
+                  end
+                else if(size_of_inputs==4)begin
+                   number_of_input_reads_needed = number_of_inputs >> 2;
+                   end
+                else begin
+                   number_of_input_reads_needed = number_of_inputs;
+                   end
+                number_of_input_reads_needed = number_of_input_reads_needed + number_of_input_reads;
+                input_value <= input_input;
+             end
+             else if(number_of_input_reads==0)begin
+                input_read_complete_signal = 0;
+                end
+             else begin
+                if(number_of_input_reads<number_of_input_reads_needed)begin
+                   input_value <= input_input;
+                end
+                else begin
+                   input_read_complete_signal = 1'b1;
+                   end
+                end
+             number_of_input_reads <= number_of_input_reads + 1'b1;
+             end
      end
 
    always@(*)
      begin
-        some_input = sram_dut_read_data;
-        dut_sram_read_address = number_of_sram_reads;
+        input_input = sram_dut_read_data;
+        weight_input = wmem_dut_read_data;
+        dut_sram_read_address = number_of_input_reads;
+        dut_wmem_read_address = number_of_weight_reads;
      end
 
 
