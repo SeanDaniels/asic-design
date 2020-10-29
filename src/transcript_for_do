@@ -1,0 +1,59 @@
+# Reading pref.tcl
+# Loading project sd-564-project
+pwd
+# C:/Users/Sean/Desktop/projects/verilog-projects/asic-design/src
+# 0 compiles, 3 failed with no errors.
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.tb_top
+# vsim work.tb_top 
+# Start time: 19:16:46 on Oct 29,2020
+# Loading sv_std.std
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# Saving layout as "custom_simulate"
+add wave -position insertpoint  \
+sim:/tb_top/clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: swd  Hostname: DESKTOP  ProcessID: 14840
+#           Attempting to use alternate WLF file "./wlft1j4rbb".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft1j4rbb
+add wave -position insertpoint  \
+sim:/tb_top/dut/reset_b
+add wave -position insertpoint  \
+sim:/tb_top/dut/dut_run
+add wave -position insertpoint  \
+sim:/tb_top/dut/dut_busy
+add wave -position insertpoint  \
+sim:/tb_top/dut/dut_sram_write_address
+add wave -position insertpoint  \
+sim:/tb_top/dut/dut_sram_write_data
+add wave -position insertpoint  \
+sim:/tb_top/dut/dut_sram_read_address
+add wave -position insertpoint  \
+sim:/tb_top/dut/dut_wmem_read_address
+add wave -position insertpoint  \
+sim:/tb_top/dut/wmem_dut_read_data
+add wave -position insertpoint  \
+sim:/tb_top/dut/sram_dut_read_data
+add wave -position insertpoint  \
+sim:/tb_top/dut/input_value
+add wave -position insertpoint  \
+sim:/tb_top/dut/weight_value
+add wave -position insertpoint  \
+sim:/tb_top/dut/number_of_inputs \
+sim:/tb_top/dut/number_of_weights \
+sim:/tb_top/dut/number_of_input_reads \
+sim:/tb_top/dut/number_of_weight_reads
+run 600ps
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/564_final_inputs_0.dat 
+# INFO::readmem : inputs/564_final_weights_0.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+run
