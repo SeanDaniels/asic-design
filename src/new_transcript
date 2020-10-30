@@ -1,3 +1,12 @@
+couldn't open "transcript": permission denied
+# Reading pref.tcl
+# Loading project sd-564-project
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# reading C:/Users/swd/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project sd-564-project
 # 0 compiles, 3 failed with no errors.
 # Compile of project.v failed with 1 errors.
 # Compile of sram.sv was successful.
@@ -1391,6 +1400,3 @@ run
 #    Time: 665 ps  Iteration: 1  Instance: /tb_top
 # ** Warning: ** Warning: (vsim-PLI-3887) Key "95" is not a valid key for this associative array.    : testbench_564.sv(184)
 #    Time: 665 ps  Iteration: 1  Instance: /tb_top
-# End time: 16:44:56 on Oct 30,2020, Elapsed time: 5:17:39
-# Errors: 0, Warnings: 4
-# Closing project C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/sd-564-project.mpf

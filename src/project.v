@@ -14,7 +14,7 @@ module project(
                input reg [15:0]  sram_dut_read_data
                );
 
-   reg                           sram_read_flag, accumulation_complete, processing_done, input_read_complete_signal;
+   reg                           sram_read_flag, accumulation_complete, processing_done, input_read_complete_signal, weight_read_complete_signal;
    reg [2:0]                     main_state_machine_current_state, main_state_machine_next_state;
    reg [2:0]                     secondary_state_machine_current_state, secondary_state_machine_next_state;
    reg [15:0]                    input_input, weight_input;
@@ -26,10 +26,9 @@ module project(
    reg [15:0]                    number_of_inputs = 16'b0, number_of_weights = 16'b0;
    reg [15:0]                    number_of_input_reads, number_of_weight_reads;
    reg [15:0]                    input_value, weight_value;
-
-
-
-
+   reg [255:0]                   accumulated_inputs = 256'b0, accumulated_weights = 256'b0;
+   reg [7:0]                     mark_start = 8'b0;
+   reg [5:0]                     mark_increment = 8'b0, mark_end = 8'b0;
 
 
    // top level sm
@@ -65,6 +64,7 @@ module project(
                begin
                   dut_busy = 1'b1;
                   number_of_input_reads = 16'b0;
+                  number_of_weight_reads = 16'b0;
                   main_state_machine_next_state = PROCESS;
                end
              else
@@ -94,39 +94,89 @@ module project(
         if(main_state_machine_current_state == PROCESS)
           begin
              dut_sram_write_enable <= 1'b0;
-             if(number_of_input_reads==1)begin
-                  number_of_inputs <= input_input;
+             case(number_of_input_reads)
+               0: begin
+                  input_read_complete_signal = 0;
+                  weight_read_complete_signal = 0;
+                  mark_start = 8'b0;
                end
-             else if(number_of_input_reads==2)begin
-                size_of_inputs <= input_input;
-                end
-             else if(number_of_input_reads==3) begin
-                if(size_of_inputs==8)begin
-                   number_of_input_reads_needed = number_of_inputs >> 1;
+               1: begin
+                  number_of_inputs <= input_input;
+                  number_of_weights <= weight_input;
+               end
+               2: begin
+                  size_of_inputs <= input_input;
+                  size_of_weights <= weight_input;
+                  mark_end = size_of_inputs[5:0];
+               end
+               3: begin
+                  //determine how many reads are needed to get all inputs
+                  case(size_of_inputs)
+                    8:begin
+                        number_of_input_reads_needed = number_of_inputs >> 1;
+                     end
+                    4:begin
+                       number_of_input_reads_needed = number_of_inputs >> 2;
+                    end
+                    2:begin
+                       number_of_input_reads_needed = number_of_inputs >> 3;
+                       end
+                    default: begin
+                       number_of_input_reads_needed = number_of_inputs;
+                    end
+                  endcase
+                  //determine how many reads are needed to get all weights
+                  case(size_of_weights)
+                    8: begin
+                       number_of_weight_reads_needed = number_of_weights >> 1;
+                    end
+                    4: begin
+                       number_of_weight_reads_needed = number_of_weights >> 2;
+                    end
+                    2:begin
+                       number_of_weight_reads_needed = number_of_weights >> 3;
+                    end
+                    default: begin
+                       number_of_weight_reads_needed = number_of_weights;
+                       end
+                     endcase
+                  // sum number of reads needed with number reads that have already occured
+                  // determine how many *more* reads are needed
+                  number_of_input_reads_needed = number_of_input_reads_needed + number_of_input_reads;
+                  number_of_weight_reads_needed = number_of_weight_reads_needed + number_of_weight_reads;
+                  // regardless, store value
+                  input_value <= input_input;
+                  accumulated_inputs = accumulated_inputs << size_of_inputs;
+                  accumulated_inputs <= {accumulated_inputs[0], input_input};
+                  weight_value <= weight_input;
+               end
+               default: begin
+                  if(number_of_input_reads<number_of_input_reads_needed)begin
+                     input_value <= input_input;
+                     accumulated_inputs = accumulated_inputs << size_of_inputs;
+                     accumulated_inputs <= {accumulated_inputs[0], input_input};
+                     mark_start <= mark_end;
+                     mark_end <= mark_end + size_of_inputs;
                   end
-                else if(size_of_inputs==4)begin
-                   number_of_input_reads_needed = number_of_inputs >> 2;
-                   end
-                else begin
-                   number_of_input_reads_needed = number_of_inputs;
-                   end
-                number_of_input_reads_needed = number_of_input_reads_needed + number_of_input_reads;
-                input_value <= input_input;
+                  else begin
+                     input_read_complete_signal = 1'b1;
+                  end
+                  if(number_of_weight_reads<number_of_weight_reads_needed)begin
+                     weight_value <= weight_input;
+                     end
+                  else begin
+                     weight_read_complete_signal = 1'b1;
+                     end
+               end
+             endcase
+             if(input_read_complete_signal==1'b0)begin
+                number_of_input_reads <= number_of_input_reads + 1'b1;
              end
-             else if(number_of_input_reads==0)begin
-                input_read_complete_signal = 0;
-                end
-             else begin
-                if(number_of_input_reads<number_of_input_reads_needed)begin
-                   input_value <= input_input;
-                end
-                else begin
-                   input_read_complete_signal = 1'b1;
-                   end
-                end
-             number_of_input_reads <= number_of_input_reads + 1'b1;
+             if(weight_read_complete_signal==1'b0)begin
+                number_of_weight_reads <= number_of_weight_reads + 1'b1;
              end
-     end
+          end
+        end
 
    always@(*)
      begin
