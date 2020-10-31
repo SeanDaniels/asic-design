@@ -81,3 +81,30 @@
 * Synchronization
 - After data is read from sram:
   - At each clock edge, read count is incremented, which isn't accurate
+* Matrix
+** Weights (2 rows, 8 columns)
+- number of inputs: 16
+- size of inputs: 2-bits
+- Inputs per read: 16 >> 1
+- Reads needed: 16 >> 3
+- Weight Matrix
+  | row | cols       |            |            |            |            |              |              |              |
+  |-----+------------+------------+------------+------------+------------+--------------+--------------+--------------|
+  |   1 | input[0:1] | input[2:3] | input[4:5] | input[6:7] | input[8:9] | input[10:11] | input[12:13] | input[14:15] |
+  |   2 | input[0:1] | input[2:3] | input[4:5] | input[6:7] | input[8:9] | input[10:11] | input[12:13] | input[14:15] |
+- Input Matrix
+  | 1 | input[0:] |
+  | 2 |           |
+  | 3 |           |
+  | 4 |           |
+  | 5 |           |
+  | 6 |           |
+  | 7 |           |
+  | 8 |           |
+** Inputs (8 rows, 1 column)
+- Number of inputs: 16
+- Size of inputs: 8-bit
+- Bits per row: 8
+- Inputs per read: 2 (16 >> 3)
+- Reads needed: 8 (16 >> 2)
+- All rows read when bit iterator = bits per row, number row

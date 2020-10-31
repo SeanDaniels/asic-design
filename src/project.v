@@ -14,7 +14,7 @@ module project(
                input reg [15:0]  sram_dut_read_data
                );
 
-   reg                           sram_read_flag, accumulation_complete, processing_done, input_read_complete_signal, weight_read_complete_signal;
+   reg                           sram_read_flag, accumulation_complete, processing_done, input_read_complete_signal, weight_read_complete_signal, start_matrix_mult_signal = 1'b0;
    reg [2:0]                     main_state_machine_current_state, main_state_machine_next_state;
    reg [2:0]                     secondary_state_machine_current_state, secondary_state_machine_next_state;
    reg [15:0]                    input_input, weight_input;
@@ -29,6 +29,7 @@ module project(
    reg [128:0]                   accumulated_inputs = 128'b0, accumulated_weights = 128'b0;
    reg [7:0]                     mark_start = 8'b0;
    reg [5:0]                     mark_increment = 8'b0, mark_end = 8'b0;
+   reg [15:0]                    x = 16'b0, y = 16'b0;
 
 
    // top level sm
@@ -50,6 +51,20 @@ module project(
         secondary_state_machine_current_state <= secondary_state_machine_next_state;
      end
 
+   /* Weights[n][n] * input[n][1]    */
+   /* Get the single column of inputs    */
+   /* Determine number of bits per row    */
+   /* get *a* single row of weights
+   /* test case 0 weights: 16 2 bit entries    */
+   /* weights[2][8], single entry spans from weight[bitStart][bitStart+2]    */
+   /* single row spans row complete when bitStart = 16    */
+   /* test case 0 inputs: 16 entries, 8 bits per entry    */
+   /* single entry spans from input[bitStart:bitStart+7]    */
+   /* test case 0 outputs: sum += weight[bitstart:bitStart+size-1]*input[bitStart:bitStart+size-1]    */
+   /* weightBitStart = bitStart+size    */
+   /* weightRowComplete if(bitStart = 16)    */
+   /* if(rowComplete), write result
+    */
    always@(*)
      begin
         case(main_state_machine_current_state)
@@ -93,6 +108,8 @@ module project(
      begin
         if(main_state_machine_current_state == PROCESS)
           begin
+             // always reading in a 16 bit value, the only difference is how many mults we do
+             // after all inputs are read we can start multing
              dut_sram_write_enable <= 1'b0;
              case(number_of_input_reads)
                0: begin
@@ -148,6 +165,7 @@ module project(
                   input_value <= input_input;
                   accumulated_inputs <= {accumulated_inputs, input_input};
                   weight_value <= weight_input;
+                  accumulated_weights <= {accumulated_weights, weight_input};
                end
                default: begin
                   if(number_of_input_reads<number_of_input_reads_needed)begin
@@ -161,6 +179,7 @@ module project(
                   end
                   if(number_of_weight_reads<number_of_weight_reads_needed)begin
                      weight_value <= weight_input;
+                     accumulated_weights <= {accumulated_weights, weight_input};
                      end
                   else begin
                      weight_read_complete_signal = 1'b1;
@@ -172,6 +191,9 @@ module project(
              end
              if(weight_read_complete_signal==1'b0)begin
                 number_of_weight_reads <= number_of_weight_reads + 1'b1;
+             end
+             if(weight_read_complete_signal==1&input_read_complete_signal==1)begin
+                start_matrix_mult_signal = 1'b1;
              end
           end
         end
