@@ -21,12 +21,12 @@ module project(
    reg [11:0]                    input_sram_addr, weight_sram_addr;
    reg [15:0]                    counter = 16'b0;
    reg [5:0]                     sram_read_count = 6'b0;
-   reg [4:0]                     number_of_input_reads_needed, number_of_weight_reads_needed;
+//   reg [4:0]                     number_of_input_reads_needed, number_of_weight_reads_needed;
    reg [15:0]                    size_of_inputs = 16'b0, size_of_weights = 16'b0;
    reg [15:0]                    number_of_inputs = 16'b0, number_of_weights = 16'b0;
    reg [15:0]                    number_of_input_reads, number_of_weight_reads;
-   reg [15:0]                    input_value, weight_value;
-   reg [255:0]                   accumulated_inputs = 256'b0, accumulated_weights = 256'b0;
+   reg [15:0]                    input_value, weight_value, number_of_input_reads_needed, number_of_weight_reads_needed;
+   reg [128:0]                   accumulated_inputs = 128'b0, accumulated_weights = 128'b0;
    reg [7:0]                     mark_start = 8'b0;
    reg [5:0]                     mark_increment = 8'b0, mark_end = 8'b0;
 
@@ -96,9 +96,9 @@ module project(
              dut_sram_write_enable <= 1'b0;
              case(number_of_input_reads)
                0: begin
-                  input_read_complete_signal = 0;
-                  weight_read_complete_signal = 0;
-                  mark_start = 8'b0;
+                  input_read_complete_signal <= 0;
+                  weight_read_complete_signal <= 0;
+                  mark_start <= 8'b0;
                end
                1: begin
                   number_of_inputs <= input_input;
@@ -107,7 +107,7 @@ module project(
                2: begin
                   size_of_inputs <= input_input;
                   size_of_weights <= weight_input;
-                  mark_end = size_of_inputs[5:0];
+                  mark_end <= size_of_inputs[5:0];
                end
                3: begin
                   //determine how many reads are needed to get all inputs
@@ -116,10 +116,10 @@ module project(
                         number_of_input_reads_needed = number_of_inputs >> 1;
                      end
                     4:begin
-                       number_of_input_reads_needed = number_of_inputs >> 2;
+                       number_of_input_reads_needed <= number_of_inputs >> 2;
                     end
                     2:begin
-                       number_of_input_reads_needed = number_of_inputs >> 3;
+                       number_of_input_reads_needed <= number_of_inputs >> 3;
                        end
                     default: begin
                        number_of_input_reads_needed = number_of_inputs;
@@ -138,23 +138,21 @@ module project(
                     end
                     default: begin
                        number_of_weight_reads_needed = number_of_weights;
-                       end
-                     endcase
+                    end
+                  endcase
                   // sum number of reads needed with number reads that have already occured
                   // determine how many *more* reads are needed
-                  number_of_input_reads_needed = number_of_input_reads_needed + number_of_input_reads;
-                  number_of_weight_reads_needed = number_of_weight_reads_needed + number_of_weight_reads;
+                  number_of_weight_reads_needed <= number_of_weight_reads_needed + number_of_weight_reads;
+                  number_of_input_reads_needed <= number_of_input_reads_needed + number_of_input_reads;
                   // regardless, store value
                   input_value <= input_input;
-                  accumulated_inputs = accumulated_inputs << size_of_inputs;
-                  accumulated_inputs <= {accumulated_inputs[0], input_input};
+                  accumulated_inputs <= {accumulated_inputs, input_input};
                   weight_value <= weight_input;
                end
                default: begin
                   if(number_of_input_reads<number_of_input_reads_needed)begin
                      input_value <= input_input;
-                     accumulated_inputs = accumulated_inputs << size_of_inputs;
-                     accumulated_inputs <= {accumulated_inputs[0], input_input};
+                     accumulated_inputs <= {accumulated_inputs, input_input};
                      mark_start <= mark_end;
                      mark_end <= mark_end + size_of_inputs;
                   end
