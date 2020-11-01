@@ -5,3 +5,4 @@ tmp/
 
 .ccls-cache/*
 .hdl_checker/*
+src/work/*

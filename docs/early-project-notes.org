@@ -108,3 +108,44 @@
 - Inputs per read: 2 (16 >> 3)
 - Reads needed: 8 (16 >> 2)
 - All rows read when bit iterator = bits per row, number row
+So, the way the project works is, you have two different matrices: weights and inputs. The weights matrix will be n x n and the inputs matrix will be n x 1. This results in a n x 1 matrix after all the multiplication. So, let me get to your specific example now.
+
+Assume you have 16 inputs consisting of 8-bit words
+16 weights consisting of 2-bit words. This will mean two things.
+First, your weights matrix will have eight words per line. So, each row in the weights matrix corresponds to two lines in the weights SRAM.
+Thus, you will need to read 16*2 lines = 32 lines from the weights matrix for the first problem.
+As for your inputs file, you will have only 16 words in total which corresponds to only two lines. And, you will go back to the beginning of your input address each time you finish multiplying one row.
+
+The weights matrix / SRAM will be as follows (not including the word size and # of entries:
+w = [ w7   w6  w5   w4   w3   w2   w1 w0
+        w15 w14 w13 w12 w11 w10 w9 w8
+        // first row completed
+        w23   w22  w21   w20   w19 w18   w17 w16
+        w31 w30 w29 w28 w27 w26 w25 w24
+        //second row completed
+        ... 14 more rows to complete
+       ..... ];
+
+The inputs matrix will be as follows:
+i = [w1 w0
+      w3 w2
+      w5 w4
+      w7 w6
+      w9 w8
+      w11 w10
+      w13 w12
+      w15 w14
+      // first input data set completed
+     ... next problem
+    ];
+
+So, there will be multiple words per line. If the word size is 2 bits, then there will be 8 words per line and if it's 4 bits, then you will have 4 words per line and finally if it's 8 bits, you will have only 2 words per line. Hence, it becomes crucial that you keep up with where you are in the multiplication process.
+
+So, the multiplication will look like this: result of first problem =
+first row result: (w0 * w0) + (w1 * w1) + ........ + ( w14 * w14) + (w15 * w15)
+second row result: (w16 * w0) + (w17 * w1) + .......... + (w30 * w14) + (w31 * w15)
+and so on
+
+To summarize, your weights and inputs sram will have the number of entries in the first line. So, once you read that number in, we know that the weights and inputs matrix will be of the following sizes respectively: # of entries x # of entries AND # of entries x 1. So, for each row in the multiplication, you will use the same input data set. Once you are done with your problem, then that's when you change both the weights and inputs.
+
+Hope this makes sense. Let me know if you need further clarification. TBH, deciphering the project specs is half the battle. The instructions are pretty confusing.
