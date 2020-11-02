@@ -149,3 +149,27 @@ and so on
 To summarize, your weights and inputs sram will have the number of entries in the first line. So, once you read that number in, we know that the weights and inputs matrix will be of the following sizes respectively: # of entries x # of entries AND # of entries x 1. So, for each row in the multiplication, you will use the same input data set. Once you are done with your problem, then that's when you change both the weights and inputs.
 
 Hope this makes sense. Let me know if you need further clarification. TBH, deciphering the project specs is half the battle. The instructions are pretty confusing.
+* weight_0
+- row one
+  |     |  1 |  2 |  3 |  4 |  5 |  6 |  7 |  8 |  9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 |
+  | bin | 00 | 01 | 00 | 01 | 01 | 00 | 01 | 00 | 01 | 01 | 01 | 00 | 01 | 00 | 00 | 01 |
+  | dec |  0 |  1 |  0 |  1 |  1 |  0 |  1 |  0 |  1 |  1 |  1 |  0 |  1 |  0 |  0 |  1 |
+- column
+| entry | decimal |   |               |
+|-------+---------+---+---------------|
+|     1 |       2 | 0 |               |
+|     2 |       7 | 1 |               |
+|     3 |       0 | 0 |               |
+|     4 |       3 | 1 |               |
+|     5 |       9 | 1 |               |
+|     6 |       0 | 0 |               |
+|     7 |       4 | 1 |               |
+|     8 |       7 | 0 | <- Stuck Here |
+|     9 |       9 | 1 |               |
+|    10 |       3 | 1 |               |
+|    11 |       6 | 1 |               |
+|    12 |       1 | 0 |               |
+|    13 |       5 | 1 |               |
+|    14 |       2 | 0 |               |
+|    15 |       3 | 0 |               |
+|    16 |     3?? | 1 |               |

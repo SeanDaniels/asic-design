@@ -22,6 +22,12 @@ add wave -noupdate -radix decimal /tb_top/dut/size_of_weights
 add wave -noupdate -radix decimal /tb_top/dut/weight_read_complete_signal
 add wave -noupdate -radix decimal /tb_top/dut/input_read_complete_signal
 add wave -noupdate -radix decimal /tb_top/dut/accumulated_inputs
+add wave -noupdate -radix decimal /tb_top/dut/weight_bits_read
+add wave -noupdate -radix decimal /tb_top/dut/weight_coef
+add wave -noupdate -radix decimal /tb_top/dut/input_coef
+add wave -noupdate -radix decimal /tb_top/dut/weight_input
+add wave -noupdate -radix decimal /tb_top/dut/current_weight_bits
+add wave -noupdate -radix decimal /tb_top/dut/weight_row_done
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {0 ps} 0}
 quietly wave cursor active 0

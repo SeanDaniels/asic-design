@@ -175,40 +175,40 @@ module tb_top();
   // Result collector 
   // Collect your compute results 
 
-  initial begin
-    for(q=0;q<ROUND;q=q+1) begin
-       wait(computeEnd[q]);
-       repeat(10) @(posedge clk);
-       $display("-------------------------------Round %0d check start-------------------------------\n",q);
-       $display("-------------------------------store results to g_result.dat-------------------------------\n");
-       $writememb($sformatf("result.dat",q),output_mem.mem,12'h000,RESULT_ADDR);
-	   repeat(10) @(posedge clk);
+   // initial begin
+   //    for(q=0;q<ROUND;q=q+1) begin
+   //       wait(computeEnd[q]);
+   //       repeat(10) @(posedge clk);
+   //       $display("-------------------------------Round %0d check start-------------------------------\n",q);
+   //       $display("-------------------------------store results to g_result.dat-------------------------------\n");
+   //       $writememb($sformatf("result.dat",q),output_mem.mem,12'h000,RESULT_ADDR);
+   //       repeat(10) @(posedge clk);
 
-	//---------------------------------------------------------------------------
-	//---------------------------------------------------------------------------
-	// Result comparator 
-	// Compare your compute results with the results computed by Python script
-       $display("-------------------------------load results to output_array-------------------------------\n");
-       $readmemb($sformatf("result.dat",q),result_array);
+   //       //---------------------------------------------------------------------------
+   //       //---------------------------------------------------------------------------
+   //       // Result comparator
+   //       // Compare your compute results with the results computed by Python script
+   //       $display("-------------------------------load results to output_array-------------------------------\n");
+   //       $readmemb($sformatf("result.dat",q),result_array);
 
-       $display("-------------------------------load results to golden_output_array-------------------------------\n");
-       $readmemb($sformatf("564_final_outputs_0.dat",q),golden_result_array);//564_final_outputs_1.dat for second run
-	   
-	   $display("-------------------------------Round %0d start compare -------------------------------\n",q);
-       for(i=0;i<NUM_RESULT;i=i+1) begin
-         if(result_array[i]==golden_result_array[i]) correctResult[q]=correctResult[q]+1;
-         
-       end
-	   
-	   $display("-------------------------------Round %0d Your report-------------------------------\n",q);
-       $display("Check 1 : Correct g results = %0d/%0d",correctResult[q],NUM_RESULT);
+   //       $display("-------------------------------load results to golden_output_array-------------------------------\n");
+   //       $readmemb($sformatf("564_final_outputs_0.dat",q),golden_result_array);//564_final_outputs_1.dat for second run
 
-       $display("computeCycle=%0d",computeCycle[q]/(2*CLK_PHASE));
-       $display("---------------------------------------------------------------------------------\n");
-       @(posedge clk);
-       ->checkFinish[q];
-     end 
-     $finish;
-	 end
+   //       $display("-------------------------------Round %0d start compare -------------------------------\n",q);
+   //       for(i=0;i<NUM_RESULT;i=i+1) begin
+   //          if(result_array[i]==golden_result_array[i]) correctResult[q]=correctResult[q]+1;
+
+   //       end
+
+   //       $display("-------------------------------Round %0d Your report-------------------------------\n",q);
+   //       $display("Check 1 : Correct g results = %0d/%0d",correctResult[q],NUM_RESULT);
+
+   //       $display("computeCycle=%0d",computeCycle[q]/(2*CLK_PHASE));
+   //       $display("---------------------------------------------------------------------------------\n");
+   //       @(posedge clk);
+   //       ->checkFinish[q];
+   //    end
+   //    $finish;
+   // end
   
 endmodule
