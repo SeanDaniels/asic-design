@@ -29,7 +29,7 @@ module project(
    reg [127:0]                   accumulated_inputs = 128'd0;
    reg [15:0]                    weight_coef = 16'b0, input_coef = 16'b0;
    reg                           process_flag;
-   reg [34:0]                        product = 35'd0, accumulation = 35'b0, mult;
+   reg [34:0]                        product = 35'd0, accumulation = 35'b0, value_to_write_to_golden_output = 35'b0, mult;
    reg                               read_weight = 1'b0;
    reg                               weight_row_done = 1'b0, pause_flag = 1'b0;
    reg [15:0]                        current_weight_bits = 16'b0;
@@ -44,8 +44,19 @@ module project(
    reg                               get_next_weight_read = 1'b0;
    reg [5:0]                         row_weight_bits_read = 6'd16;
    reg [255:0]                         total_weight_bits_read = 256'd0;
+   reg [15:0]                           number_of_rows_accumulated = 16'b0;
    reg                                 idle_process_signal = 1'b0;
    reg [2:0]                                 sync_flag = 3'd0;
+   reg                                       all_done = 1'b0;
+   integer                                   number_of_mac_runs = 0;
+   integer                                   mac_input_address = 0;
+   integer                                   weight_bit_start_index = 0;
+   reg [11:0]                                result_address = 12'd0;
+   reg                                       write_flag = 1'b0;
+
+
+
+
 
 
 
@@ -68,6 +79,7 @@ module project(
    localparam READ_TWO = 4'b0010;
    localparam COLLECT_INPUTS = 4'b0011;
    localparam MAC = 4'b0100;
+   localparam WRITE_RESULT = 4'b0101;
    localparam IDLE = 4'b0111;
 
 
@@ -165,18 +177,13 @@ module project(
           READ_ONE:begin
              if(get_number_inputs==1'b1)begin
                 number_of_inputs <= input_input;
-                $display("Number of inputs: %d", number_of_inputs);
                 get_number_inputs <= 1'b0;
-                $display("Current input read adress: %d", number_of_input_reads);
                 number_of_input_reads <= number_of_input_reads + 1'b1;
-                $display("Next input read adress: %d", number_of_input_reads);
              end
              if(get_weight_matrix_dimensions==1'b1)begin
                 weight_matrix_dimensions <= weight_input;
                 get_weight_matrix_dimensions <= 1'b0;
-                $display("Current weight read adress: %d", number_of_weight_reads);
                 number_of_weight_reads <= number_of_weight_reads + 1'b1;
-                $display("Next weight read adress: %d", number_of_weight_reads);
              end
              secondary_state_machine_next_state <= READ_TWO;
           end
@@ -194,7 +201,6 @@ module project(
                   end
                   8:begin
                      number_of_input_reads_needed = (number_of_inputs >> 1);
-                     $display("Number of memory reads: %d", (number_of_inputs >> 1));
                   end
                   default:begin
                      number_of_input_reads_needed = size_of_inputs;
@@ -202,16 +208,13 @@ module project(
                 endcase
                 $display("Current input read adress: %d", number_of_input_reads);
                 number_of_input_reads <= number_of_input_reads + 1'b1;
-                $display("Next input read adress: %d", number_of_input_reads);
              end
              if(get_size_weights == 1'b1)begin
                 size_of_weights=weight_input;
                 $display("Size of inputs: %d bits", size_of_weights);
                 get_size_weights = 1'b0;
                 weight_bits_per_row = size_of_weights * weight_matrix_dimensions;
-                $display("Current weight read adress: %d", number_of_weight_reads);
                 number_of_weight_reads <= number_of_weight_reads+1'b1;
-                $display("Next weight read adress: %d", number_of_weight_reads);
              end
              secondary_state_machine_next_state <= COLLECT_INPUTS;
              sync_flag = 3'd1;
@@ -227,11 +230,9 @@ module project(
              else begin
                 if(number_of_input_reads>number_of_input_reads_needed)begin
                    input_read_complete_signal = 1'b1;
-                   secondary_state_machine_next_state = MAC;
+                   secondary_state_machine_next_state <= MAC;
                    total_weight_bits_read = 256'd0;
-                   if (size_of_weights == 2)begin
-                      current_weight_bits = {weight_input[1],weight_input[0], weight_input[3], weight_input[2], weight_input[5], weight_input[4], weight_input[7], weight_input[6], weight_input[9], weight_input[8], weight_input[11], weight_input[10], weight_input[13], weight_input[12], weight_input[15], weight_input[14]};
-                      end
+                   current_weight_bits = weight_input;
                    start_mac = 1'b1;
                    accumulated_inputs <= {accumulated_inputs, input_input[7:0], input_input[15:8]};
                 end
@@ -240,25 +241,46 @@ module project(
                    secondary_state_machine_next_state <= COLLECT_INPUTS;
                    accumulated_inputs <= {accumulated_inputs, input_input[7:0], input_input[15:8]};
                    number_of_input_reads <= number_of_input_reads + 1'b1;
-                   // $display("Adding Current input read adress: %d", number_of_input_reads);
-                   // $display("Current input read adress: %d", number_of_input_reads);
-                   // $display("Next input read adress: %d", number_of_input_reads);
                 end
              end
           end
           MAC: begin
              if(start_mac==1'b1)begin
                 $display("Current weight bits: %d", current_weight_bits);
-                get_next_weight_read = 1'b1;
-                start_mac = 1'b0;
-                row_weight_bits_read = 0;
-                number_of_weight_reads <= number_of_weight_reads + 1'b1;
-                product = 35'b0;
+                if(all_done == 1'b1)begin
+                   all_done = 1'b0;
+                   value_to_write_to_golden_output <= accumulation;
+                end
+                else begin
+                   get_next_weight_read = 1'b1;
+                   start_mac = 1'b0;
+                   row_weight_bits_read = 0;
+                   number_of_weight_reads <= number_of_weight_reads + 1'b1;
+                   product = 35'b0;
+                   if(size_of_weights==2)begin
+                      weight_bit_start_index = 1;
+                   end
+                   if(size_of_weights==4)begin
+                      weight_bit_start_index = 3;
+                   end
+                   if(size_of_weights==8)begin
+                      weight_bit_start_index = 7;
+                   end
+                   if(size_of_weights==16)begin
+                      weight_bit_start_index = 15;
+                   end
+                   if(weight_row_done == 1'b1)begin
+                      weight_row_done = 1'b0;
+                      value_to_write_to_golden_output <= accumulation;
+                      accumulation <= 0;
+                   end
+                end
              end
              else begin
                 case(size_of_inputs)
                   2:begin
-                     input_coef <= {{14{1'b0}},accumulated_inputs[127-:2]};
+                     mac_input_address = 127 - 2*number_of_mac_runs;
+                     input_coef <= {{14{1'b0}},accumulated_inputs[mac_input_address-:2]};
                      accumulated_inputs <= accumulated_inputs << 2;
                   end
                   4:begin
@@ -266,8 +288,10 @@ module project(
                      accumulated_inputs <= accumulated_inputs << 4;
                   end
                   8:begin
-                     input_coef = {{8{1'b0}},accumulated_inputs[127-:8]};
-                     accumulated_inputs = accumulated_inputs << 8;
+                     mac_input_address = 127 - 8*number_of_mac_runs;
+                     input_coef = {{8{1'b0}},accumulated_inputs[mac_input_address-:8]};
+                     // input_coef = {{8{1'b0}},accumulated_inputs[127-:8]};
+                     // accumulated_inputs = accumulated_inputs << 8;
                   end
                   default: begin
                      input_coef <= accumulated_inputs[127-:16];
@@ -276,20 +300,24 @@ module project(
                 endcase
                 case(size_of_weights)
                   2:begin
-                     weight_coef = {{14{1'b0}},current_weight_bits[15-:2]};
-                     current_weight_bits = current_weight_bits << 2;
+                     // weight_coef = {{14{1'b0}},current_weight_bits[15-:2]};
+                     // current_weight_bits = current_weight_bits << 2;
+                     weight_coef = {{14{1'b0}},current_weight_bits[weight_bit_start_index-:2]};
+                     weight_bit_start_index = weight_bit_start_index + 2;
                      row_weight_bits_read = row_weight_bits_read + 2;
                      total_weight_bits_read = total_weight_bits_read + 2;
                   end
                   4:begin
-                     weight_coef <= {{12{1'b0}},current_weight_bits[15-:4]};
-                     current_weight_bits <= current_weight_bits << 4;
+                     weight_coef <= {{12{1'b0}},current_weight_bits[weight_bit_start_index-:4]};
+                     weight_bit_start_index = weight_bit_start_index + 4;
+                     // current_weight_bits <= current_weight_bits << 4;
                      row_weight_bits_read <= row_weight_bits_read + 4;
                      total_weight_bits_read <= total_weight_bits_read + 4;
                   end
                   8:begin
-                     weight_coef <= {{8{1'b0}},current_weight_bits[15-:8]};
-                     current_weight_bits <= current_weight_bits << 8;
+                     weight_coef <= {{8{1'b0}},current_weight_bits[weight_bit_start_index-:8]};
+                     weight_bit_start_index = weight_bit_start_index + 8;
+                     // current_weight_bits <= current_weight_bits << 8;
                      row_weight_bits_read <= row_weight_bits_read + 8;
                      total_weight_bits_read <= total_weight_bits_read + 8;
                   end
@@ -299,22 +327,50 @@ module project(
                      total_weight_bits_read <= total_weight_bits_read + 16;
                   end
                 endcase
-                $display("Number of weight row bits read: %d", row_weight_bits_read);
-                $display("Number of total row bits read: %d", total_weight_bits_read);
-                $display("Mult value: %d", mult);
+                number_of_mac_runs = number_of_mac_runs + 1;
+                product <= 0;
                 product <= weight_coef*input_coef;
-                if(row_weight_bits_read == 14)begin
+                if(row_weight_bits_read == 16)begin
                    get_next_weight_read = 1'b0;
-                   current_weight_bits <= weight_input;
-                   row_weight_bits_read <= 6'd0;
+                   current_weight_bits = weight_input;
+                   $display("New weight bits: %d", current_weight_bits);
+                   row_weight_bits_read = 6'd0;
                    start_mac = 1'b1;
+                   secondary_state_machine_next_state <= MAC;
                 end
                 if(total_weight_bits_read==weight_bits_per_row)begin
+                   $display("Total weight bits read: %d", total_weight_bits_read);
+                   $display("Weight bits per row: %d", weight_bits_per_row);
                    weight_row_done = 1'b1;
                    total_weight_bits_read <= 256'd0;
+                   number_of_rows_accumulated <= number_of_rows_accumulated + 1;
+                   if(number_of_rows_accumulated<weight_matrix_dimensions)begin
+                      current_weight_bits = weight_input;
+                      start_mac = 1'b1;
+                      write_flag = 1'b1;
+                      secondary_state_machine_next_state <= WRITE_RESULT;
+                   end
+                   else begin
+                      current_weight_bits = 0;
+                      start_mac = 1'b0;
+                      all_done = 1'b1;
+                      secondary_state_machine_next_state <= MAC;
+                   end
+                   number_of_mac_runs = 0;
                 end
              end
           end
+          WRITE_RESULT: begin
+             if(write_flag==1'b1)begin
+                write_flag = 1'b0;
+                dut_sram_write_enable <= 1'b1;
+                dut_sram_write_address = result_address;
+                dut_sram_write_data = value_to_write_to_golden_output[15:0];
+                result_address <= result_address + 12'd1;
+             end
+             secondary_state_machine_next_state = MAC;
+
+             end
           IDLE: begin
              idle_process_signal <= 1'b1;
              secondary_state_machine_next_state <= IDLE;

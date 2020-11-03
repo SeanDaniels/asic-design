@@ -296,3 +296,3267 @@ run
 # Mult value:           x
 run
 # Current weight bits: 21825
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits: 21824
+# Number of weight row bits read:  2
+# Number of total row bits read:                                                                              2
+# Mult value:           x
+# Number of weight row bits read:  4
+# Number of total row bits read:                                                                              4
+# Mult value:           x
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits: 21824
+# Number of weight row bits read:  2
+# Number of total row bits read:                                                                              2
+# Mult value:           x
+# Number of weight row bits read:  4
+# Number of total row bits read:                                                                              4
+# Mult value:           x
+# Number of weight row bits read:  6
+# Number of total row bits read:                                                                              6
+# Mult value:           x
+# Number of weight row bits read:  8
+# Number of total row bits read:                                                                              8
+# Mult value:           x
+# Number of weight row bits read: 10
+# Number of total row bits read:                                                                             10
+# Mult value:           x
+# Number of weight row bits read: 12
+# Number of total row bits read:                                                                             12
+# Mult value:           x
+run
+# Number of weight row bits read: 14
+# Number of total row bits read:                                                                             14
+# Mult value:           x
+run
+# Number of weight row bits read: 16
+# Number of total row bits read:                                                                             16
+# Mult value:           x
+run
+# Current weight bits:  1024
+run
+# Number of weight row bits read:  2
+# Number of total row bits read:                                                                             18
+# Mult value:           x
+run
+# Number of weight row bits read:  4
+# Number of total row bits read:                                                                             20
+# Mult value:           x
+run
+# Number of weight row bits read:  6
+# Number of total row bits read:                                                                             22
+# Mult value:           x
+run
+# Number of weight row bits read:  8
+# Number of total row bits read:                                                                             24
+# Mult value:           x
+run
+# Number of weight row bits read: 10
+# Number of total row bits read:                                                                             26
+# Mult value:           x
+run
+# Number of weight row bits read: 12
+# Number of total row bits read:                                                                             28
+# Mult value:           x
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits: 21824
+run
+run
+# New weight bits:    16
+run
+# Current weight bits:    16
+run
+run
+run
+run
+run
+run
+run
+run
+# New weight bits:  1089
+run
+# Current weight bits:  1089
+run
+run
+run
+run
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits: 21824
+run
+run
+# New weight bits:    16
+run
+# Current weight bits:    16
+run
+run
+run
+run
+run
+run
+run
+run
+# New weight bits:  1089
+run
+# Current weight bits:  1089
+run
+run
+run
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits: 21824
+add wave -position insertpoint  \
+sim:/tb_top/dut/number_of_mac_runs
+run
+run
+# New weight bits:    16
+run
+# Current weight bits:    16
+run
+run
+run
+run
+run
+run
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits: 21824
+add wave -position insertpoint  \
+sim:/tb_top/dut/mac_input_address
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits: 21824
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits: 21824
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits: 21824
+run
+run
+# New weight bits:    16
+run
+# Current weight bits:    16
+run
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits: 21824
+run
+run
+# New weight bits:    16
+run
+# Current weight bits:    16
+run
+run
+run
+run
+run
+run
+run
+run
+# New weight bits:  1089
+run
+# Current weight bits:  1089
+run
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits: 21761
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+run
+run
+# New weight bits:    16
+run
+# Current weight bits:    16
+run
+run
+run
+run
+run
+run
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+run
+run
+# New weight bits:  1024
+run
+# Current weight bits:  1024
+run
+run
+run
+run
+run
+run
+run
+run
+# New weight bits: 16656
+run
+# Current weight bits: 16656
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+run
+run
+# New weight bits:  1024
+run
+# Current weight bits:  1024
+run
+run
+run
+run
+run
+run
+run
+run
+# New weight bits: 16656
+run
+# Current weight bits: 16656
+add wave -position insertpoint  \
+sim:/tb_top/dut/mac_input_address
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+run
+run
+run
+run
+run
+run
+run
+# New weight bits: 16656
+run
+# Current weight bits: 16656
+run
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+add wave -position insertpoint  \
+sim:/tb_top/dut/value_to_write_to_golden_output
+run -continue
+run
+run
+run
+run
+run
+run
+run
+# New weight bits: 16656
+run
+# Current weight bits: 16656
+do ./do-files/run.do
+# Compile of project.v failed with 1 errors.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv failed with 2 errors.
+# 3 compiles, 2 failed with 3 errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+vlog project.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:50:17 on Nov 03,2020
+# vlog -reportprogress 300 project.v 
+# -- Compiling module project
+# ** Error: (vlog-13025) project.v(358): near ":": Syntax error. Statement labels are only allowed in SystemVerilog.
+# End time: 10:50:17 on Nov 03,2020, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/Users/swd/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+vlog project.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:50:54 on Nov 03,2020
+# vlog -reportprogress 300 project.v 
+# -- Compiling module project
+# 
+# Top level modules:
+# 	project
+# End time: 10:50:54 on Nov 03,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+run
+run
+run
+run
+run
+run
+run
+# New weight bits: 16656
+run
+# Current weight bits: 16656
+run
+run
+run
+run
+run
+run
+run
+run
+# New weight bits: 21825
+run
+# Current weight bits: 21825
+step
+run
+run
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+run
+# New weight bits: 16656
+run
+# Current weight bits: 16656
+run
+run
+run
+run
+run
+run
+run
+run
+# New weight bits: 21825
+run
+# Current weight bits: 21825
+run
+run
+run
+run
+run
+run
+run
+run
+# New weight bits: 21761
+add wave -position insertpoint  \
+sim:/tb_top/dut/number_of_rows_accumulated
+run
+# Current weight bits: 21761
+run
+run
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+run 20ps
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+run
+run
+run
+run
+run
+run
+run
+run
+# New weight bits: 21825
+run
+# Current weight bits: 21825
+run
+run
+run
+run
+run
+run
+run
+run
+# New weight bits: 21761
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Number of memory reads:     8
+# Current input read adress:     1
+# Next input read adress:     1
+# Size of inputs:     2 bits
+# Current weight read adress:     1
+# Next weight read adress:     1
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+run
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+run
+# Current weight bits: 16656
+run
+run
+run
+run
+run
+run
+run
+run
+# New weight bits: 21825
+run
+# Current weight bits: 21825
+run
+run
+run
+run
+run
+run
+run
+run
+# New weight bits: 21761
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+run
+# Current weight bits: 21761
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+run
+run
+# New weight bits: 21825
+run
+# Current weight bits: 21825
+run
+run
+run
+run
+run
+run
+run
+run
+# New weight bits: 21761
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+run
+# Current weight bits: 21761
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+run
+run
+# New weight bits: 21825
+run
+# Current weight bits: 21825
+run
+run
+run
+run
+run
+run
+run
+run
+# New weight bits: 21761
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+run
+# Current weight bits: 21761
+run
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+run 80ps
+# New weight bits: 21825
+# Current weight bits: 21825
+run 80ps
+# New weight bits: 21761
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21761
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+# New weight bits: 21825
+# Current weight bits: 21825
+run
+run
+run
+# New weight bits: 21761
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+run
+# Current weight bits: 21761
+run
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+# New weight bits: 21825
+# Current weight bits: 21825
+run
+# New weight bits: 21761
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+run
+# Current weight bits: 21761
+run
+run 180ps
+# New weight bits: 16721
+# Current weight bits: 16721
+# New weight bits:  4353
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  4353
+run 180ps
+# New weight bits: 17669
+# Current weight bits: 17669
+# New weight bits:  1281
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  1281
+run 180ps
+# New weight bits:  1040
+# Current weight bits:  1040
+# New weight bits: 20564
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20564
+run 180ps
+# New weight bits:  4100
+# Current weight bits:  4100
+# New weight bits:  5200
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  5200
+run 180ps
+# New weight bits:  4181
+# Current weight bits:  4181
+# New weight bits: 21760
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21760
+run 900ps
+# New weight bits:  4116
+# Current weight bits:  4116
+# New weight bits: 20800
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20800
+# New weight bits: 20496
+# Current weight bits: 20496
+# New weight bits:  5460
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  5460
+# New weight bits:  4417
+# Current weight bits:  4417
+# New weight bits:     1
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:     1
+# New weight bits: 21825
+# Current weight bits: 21825
+# New weight bits: 21509
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21509
+# New weight bits: 20497
+# Current weight bits: 20497
+# New weight bits:  1089
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  1089
+run 720ps
+# New weight bits: 16708
+# Current weight bits: 16708
+# New weight bits: 16465
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16465
+# New weight bits:  4112
+# Current weight bits:  4112
+# New weight bits:  4181
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  4181
+# New weight bits: 17425
+# Current weight bits: 17425
+# New weight bits: 20484
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20484
+# New weight bits: 20756
+# Current weight bits: 20756
+# New weight bits:    16
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+run 180ps
+# New weight bits:    16
+# Current weight bits:    16
+# New weight bits:     4
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+# New weight bits: 21825
+# Current weight bits: 21825
+# New weight bits: 21761
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21761
+# New weight bits: 16721
+# Current weight bits: 16721
+# New weight bits:  4353
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  4353
+# New weight bits: 17669
+# Current weight bits: 17669
+# New weight bits:  1281
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  1281
+# New weight bits:  1040
+# Current weight bits:  1040
+# New weight bits: 20564
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20564
+# New weight bits:  4100
+# Current weight bits:  4100
+# New weight bits:  5200
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  5200
+# New weight bits:  4181
+# Current weight bits:  4181
+# New weight bits: 21760
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21760
+# New weight bits:  4116
+# Current weight bits:  4116
+# New weight bits: 20800
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20800
+# New weight bits: 20496
+# Current weight bits: 20496
+# New weight bits:  5460
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  5460
+# New weight bits:  4417
+# Current weight bits:  4417
+# New weight bits:     1
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:     1
+# New weight bits: 21825
+# Current weight bits: 21825
+# New weight bits: 21509
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21509
+# New weight bits: 20497
+# Current weight bits: 20497
+# New weight bits:  1089
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  1089
+# New weight bits: 16708
+# Current weight bits: 16708
+# New weight bits: 16465
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16465
+# New weight bits:  4112
+# Current weight bits:  4112
+# New weight bits:  4181
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  4181
+# New weight bits: 17425
+# Current weight bits: 17425
+# New weight bits: 20484
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20484
+# New weight bits: 20756
+# Current weight bits: 20756
+run 180ps
+# New weight bits:    16
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:    16
+# New weight bits:     4
+# Current weight bits:     4
+run
+run
+run
+# New weight bits: 13922
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+run
+run
+run
+run
+run
+run
+run
+run
+# New weight bits: 13922
+run
+# Current weight bits: 13922
+run
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+# New weight bits: 21825
+# Current weight bits: 21825
+# New weight bits: 21761
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21761
+# New weight bits: 16721
+# Current weight bits: 16721
+# New weight bits:  4353
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  4353
+# New weight bits: 17669
+# Current weight bits: 17669
+# New weight bits:  1281
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  1281
+# New weight bits:  1040
+# Current weight bits:  1040
+# New weight bits: 20564
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20564
+# New weight bits:  4100
+# Current weight bits:  4100
+# New weight bits:  5200
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  5200
+# New weight bits:  4181
+# Current weight bits:  4181
+# New weight bits: 21760
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21760
+# New weight bits:  4116
+# Current weight bits:  4116
+# New weight bits: 20800
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20800
+# New weight bits: 20496
+# Current weight bits: 20496
+# New weight bits:  5460
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  5460
+# New weight bits:  4417
+# Current weight bits:  4417
+# New weight bits:     1
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:     1
+# New weight bits: 21825
+# Current weight bits: 21825
+# New weight bits: 21509
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21509
+# New weight bits: 20497
+# Current weight bits: 20497
+# New weight bits:  1089
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  1089
+# New weight bits: 16708
+# Current weight bits: 16708
+# New weight bits: 16465
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16465
+# New weight bits:  4112
+# Current weight bits:  4112
+# New weight bits:  4181
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  4181
+# New weight bits: 17425
+# Current weight bits: 17425
+# New weight bits: 20484
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20484
+# New weight bits: 20756
+# Current weight bits: 20756
+run 180ps
+# New weight bits:    16
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# New weight bits:    16
+# Current weight bits:    16
+# Current weight bits:    16
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+# New weight bits: 21825
+# Current weight bits: 21825
+# New weight bits: 21761
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21761
+# New weight bits: 16721
+# Current weight bits: 16721
+# New weight bits:  4353
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  4353
+# New weight bits: 17669
+# Current weight bits: 17669
+# New weight bits:  1281
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  1281
+# New weight bits:  1040
+# Current weight bits:  1040
+# New weight bits: 20564
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20564
+# New weight bits:  4100
+# Current weight bits:  4100
+# New weight bits:  5200
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  5200
+# New weight bits:  4181
+# Current weight bits:  4181
+# New weight bits: 21760
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21760
+# New weight bits:  4116
+# Current weight bits:  4116
+# New weight bits: 20800
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20800
+# New weight bits: 20496
+# Current weight bits: 20496
+# New weight bits:  5460
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  5460
+# New weight bits:  4417
+# Current weight bits:  4417
+# New weight bits:     1
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:     1
+# New weight bits: 21825
+# Current weight bits: 21825
+# New weight bits: 21509
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21509
+# New weight bits: 20497
+# Current weight bits: 20497
+# New weight bits:  1089
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  1089
+# New weight bits: 16708
+# Current weight bits: 16708
+# New weight bits: 16465
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16465
+# New weight bits:  4112
+# Current weight bits:  4112
+# New weight bits:  4181
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  4181
+# New weight bits: 17425
+# Current weight bits: 17425
+# New weight bits: 20484
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20484
+# New weight bits: 20756
+# Current weight bits: 20756
+run 180ps
+# New weight bits:    16
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:    16
+# New weight bits:     4
+# Current weight bits:     4
+run
+run
+run
+# New weight bits: 13922
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+run
+run
+run
+run
+run
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+# New weight bits: 21825
+# Current weight bits: 21825
+# New weight bits: 21761
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21761
+# New weight bits: 16721
+# Current weight bits: 16721
+# New weight bits:  4353
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  4353
+# New weight bits: 17669
+# Current weight bits: 17669
+# New weight bits:  1281
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  1281
+# New weight bits:  1040
+# Current weight bits:  1040
+# New weight bits: 20564
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20564
+# New weight bits:  4100
+# Current weight bits:  4100
+# New weight bits:  5200
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  5200
+# New weight bits:  4181
+# Current weight bits:  4181
+# New weight bits: 21760
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21760
+# New weight bits:  4116
+# Current weight bits:  4116
+# New weight bits: 20800
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20800
+# New weight bits: 20496
+# Current weight bits: 20496
+# New weight bits:  5460
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  5460
+# New weight bits:  4417
+# Current weight bits:  4417
+# New weight bits:     1
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:     1
+# New weight bits: 21825
+# Current weight bits: 21825
+# New weight bits: 21509
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21509
+# New weight bits: 20497
+# Current weight bits: 20497
+# New weight bits:  1089
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  1089
+# New weight bits: 16708
+# Current weight bits: 16708
+# New weight bits: 16465
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16465
+# New weight bits:  4112
+# Current weight bits:  4112
+# New weight bits:  4181
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  4181
+restart
+run
+# -------------------------------start_simulation-------------------------------
+# 
+run
+run
+run
+run
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+run
+# -------------------------------Round 0 start-------------------------------
+# 
+run
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+run
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+run
+# New weight bits:  1024
+# Current weight bits:  1024
+run
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+add wave -position insertpoint  \
+sim:/tb_top/dut/dut_sram_write_enable
+run
+# New weight bits: 21825
+# Current weight bits: 21825
+run
+# New weight bits: 21761
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21761
+run
+# New weight bits: 16721
+# Current weight bits: 16721
+run
+# New weight bits:  4353
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  4353
+restart
+run 900ps
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+run
+run
+run
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+run
+# Current weight bits: 16656
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# New weight bits: 21825
+run
+# Current weight bits: 21825
+run
+run
+run
+run
+run
+run
+run
+run
+# New weight bits: 21761
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+run
+# Current weight bits: 21761
+run
+run
+run
+run
+run
+run
+restart
+run 900ps
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+run
+run
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+run
+run
+restart
+run 900ps
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Number of inputs:     0
+# Current input read adress:     0
+# Next input read adress:     0
+# Current weight read adress:     0
+# Next weight read adress:     0
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+run
+run
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+run
+run
+restart
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+# New weight bits: 21825
+# Current weight bits: 21825
+# New weight bits: 21761
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21761
+# New weight bits: 16721
+# Current weight bits: 16721
+# New weight bits:  4353
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  4353
+# New weight bits: 17669
+# Current weight bits: 17669
+# New weight bits:  1281
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  1281
+# New weight bits:  1040
+# Current weight bits:  1040
+# New weight bits: 20564
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20564
+# New weight bits:  4100
+# Current weight bits:  4100
+# New weight bits:  5200
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  5200
+# New weight bits:  4181
+# Current weight bits:  4181
+# New weight bits: 21760
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21760
+# New weight bits:  4116
+# Current weight bits:  4116
+# New weight bits: 20800
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20800
+# New weight bits: 20496
+# Current weight bits: 20496
+# New weight bits:  5460
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  5460
+# New weight bits:  4417
+# Current weight bits:  4417
+# New weight bits:     1
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:     1
+# New weight bits: 21825
+# Current weight bits: 21825
+# New weight bits: 21509
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21509
+# New weight bits: 20497
+# Current weight bits: 20497
+# New weight bits:  1089
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  1089
+# New weight bits: 16708
+# Current weight bits: 16708
+# New weight bits: 16465
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16465
+# New weight bits:  4112
+# Current weight bits:  4112
+# New weight bits:  4181
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  4181
+run
+run
+# New weight bits: 17425
+run
+# Current weight bits: 17425
+run
+run
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+# New weight bits: 21825
+# Current weight bits: 21825
+# New weight bits: 21761
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21761
+# New weight bits: 16721
+# Current weight bits: 16721
+# New weight bits:  4353
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  4353
+# New weight bits: 17669
+# Current weight bits: 17669
+# New weight bits:  1281
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  1281
+# New weight bits:  1040
+# Current weight bits:  1040
+# New weight bits: 20564
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20564
+# New weight bits:  4100
+# Current weight bits:  4100
+# New weight bits:  5200
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  5200
+# New weight bits:  4181
+# Current weight bits:  4181
+# New weight bits: 21760
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21760
+# New weight bits:  4116
+# Current weight bits:  4116
+# New weight bits: 20800
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20800
+# New weight bits: 20496
+# Current weight bits: 20496
+# New weight bits:  5460
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  5460
+# New weight bits:  4417
+# Current weight bits:  4417
+# New weight bits:     1
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:     1
+# New weight bits: 21825
+# Current weight bits: 21825
+# New weight bits: 21509
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21509
+# New weight bits: 20497
+# Current weight bits: 20497
+# New weight bits:  1089
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  1089
+# New weight bits: 16708
+# Current weight bits: 16708
+# New weight bits: 16465
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16465
+# New weight bits:  4112
+# Current weight bits:  4112
+# New weight bits:  4181
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  4181
+do ./do-files/run.do
+# Compile of project.v was successful.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# Size of inputs:     8 bits
+# Current input read adress:     1
+# Size of inputs:     2 bits
+# Number of memory reads:     2
+# Number of memory reads needed:     8
+# Number of memory reads:     3
+# Number of memory reads needed:     8
+# Number of memory reads:     4
+# Number of memory reads needed:     8
+# Number of memory reads:     5
+# Number of memory reads needed:     8
+# Number of memory reads:     6
+# Number of memory reads needed:     8
+# Number of memory reads:     7
+# Number of memory reads needed:     8
+# Number of memory reads:     8
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Number of memory reads:     9
+# Number of memory reads needed:     8
+# Current weight bits:   341
+# New weight bits:  1024
+# Current weight bits:  1024
+# New weight bits: 16656
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16656
+# New weight bits: 21825
+# Current weight bits: 21825
+# New weight bits: 21761
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21761
+# New weight bits: 16721
+# Current weight bits: 16721
+# New weight bits:  4353
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  4353
+# New weight bits: 17669
+# Current weight bits: 17669
+# New weight bits:  1281
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  1281
+# New weight bits:  1040
+# Current weight bits:  1040
+# New weight bits: 20564
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20564
+# New weight bits:  4100
+# Current weight bits:  4100
+# New weight bits:  5200
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  5200
+# New weight bits:  4181
+# Current weight bits:  4181
+# New weight bits: 21760
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21760
+# New weight bits:  4116
+# Current weight bits:  4116
+# New weight bits: 20800
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20800
+# New weight bits: 20496
+# Current weight bits: 20496
+# New weight bits:  5460
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  5460
+# New weight bits:  4417
+# Current weight bits:  4417
+# New weight bits:     1
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:     1
+# New weight bits: 21825
+# Current weight bits: 21825
+# New weight bits: 21509
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 21509
+# New weight bits: 20497
+# Current weight bits: 20497
+# New weight bits:  1089
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  1089
+# New weight bits: 16708
+# Current weight bits: 16708
+# New weight bits: 16465
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 16465
+# New weight bits:  4112
+# Current weight bits:  4112
+# New weight bits:  4181
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:  4181
+run
+run
+# New weight bits: 17425
+run
+# Current weight bits: 17425
+run
+run
+run
+run
+# New weight bits: 20484
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits: 20484
+run
+run
+run
+run
+run
+# New weight bits: 20756
+run
+# Current weight bits: 20756
+run
+run
+run
+run
+# New weight bits:    16
+# Total weight bits read:                                                                             32
+# Weight bits per row:                                                                             32
+# Current weight bits:    16
+run

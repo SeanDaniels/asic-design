@@ -59,7 +59,7 @@ module tb_top();
   //sram for inputs
    sram  #(.ADDR_WIDTH    (12),
            .DATA_WIDTH    (16),
-           .MEM_INIT_FILE ("inupt_sram.dat"        ))
+           .MEM_INIT_FILE ("input_sram.dat"        ))
    input_mem  (
                .write_enable ( 1'b0  ),
                .write_address( 12'b0 ),
@@ -87,7 +87,7 @@ module tb_top();
   //sram for outputs
   sram  #(.ADDR_WIDTH    (12),
           .DATA_WIDTH    (16),
-          .MEM_INIT_FILE ("564_final_outputs_0.dat"        ))
+          .MEM_INIT_FILE ("result.dat"        ))
           output_mem  (
           .write_enable ( dut_sram_write_enable  ),
           .write_address( dut_sram_write_address ),

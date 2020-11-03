@@ -53,10 +53,10 @@ def parse_weights(thisList):
 
 
 def parse_inputs(thisList):
-    print("Input sram")
+    # print("Input sram")
     number_of_entries = convert(thisList[0])
     size_of_entries = convert(thisList[1])
-    print("Number of entries: {}\nSize of entries: {}\n".format(number_of_entries, size_of_entries))
+    # print("Number of entries: {}\nSize of entries: {}\n".format(number_of_entries, size_of_entries))
     run_ranges = []
     start_range = 2
     inputs = []
@@ -64,7 +64,7 @@ def parse_inputs(thisList):
         start = 0
         if size_of_entries == 8:
             flipEntry = entry[8:17] + entry[0:8]
-            print("OG: {}\n Flipped: {}\n".format(entry, flipEntry))
+            # print("OG: {}\n Flipped: {}\n".format(entry, flipEntry))
             end = size_of_entries
             for x in range(2):
                 # print("Start: {} End: {}".format(start, end))
@@ -97,8 +97,8 @@ def main():
     choppedWeightLines = []
     choppedInputLines = []
 
-    weightFile = open("../src/inputs/weight_sram.dat")
-    inputFile = open("../src/inputs/input_sram.dat")
+    weightFile = open("../../src/inputs/weight_sram.dat")
+    inputFile = open("../../src/inputs/input_sram.dat")
     weightLines = weightFile.readlines()
     weightFile.close()
     inputLines = inputFile.readlines()
@@ -119,22 +119,45 @@ def main():
 
     inputs = parse_inputs(choppedInputLines)
 
+
+    # sum = 0
+    # print("Row 0")
+    # print("Input Coef | Weight Coef | Product | Accumulation |")
+    # for i in range(len(weight_matrix[0])):
+    #     argumentA = weight_matrix[0][i]
+    #     argumentB = inputs[i]
+    #     product = argumentA * argumentB
+    #     sum += product
+    #     print("{}|{}|{}|{}|\n".format(argumentB, argumentA, product, sum))
+
     print("Number of input rows:{}\n".format(len(inputs)))
     print("Number of matrix columns: {}\n".format(len(weight_matrix[0])))
     print("Inputs: {}\n".format(inputs))
     print("Weight Matrix Row 0: {}\n".format(weight_matrix[0]))
+    for i in range(len(weight_matrix)):
+        print("Row {}: {}\n".format(i, weight_matrix[i]))
 
-    sum = 0
-    for i in range(len(weight_matrix[0])):
-        print("Product {}\n".format(i))
-        argumentA = weight_matrix[0][i]
-        argumentB = inputs[i]
-        product = argumentA * argumentB
-        sum += product
-        print("Input Coefficient: {}\nWeight Coefficent: {}\nProduct: {}\nAccumulation: {}\n".format(argumentB, argumentA, product, sum))
+    for j in range(len(weight_matrix)):
+        print("Row {}".format(j))
+        print("Input Coef | Weight Coef | Product | Accumulation |")
+        sum = 0
+        for i in range(len(weight_matrix)):
+            argumentA = weight_matrix[j][i]
+            argumentB = inputs[i]
+            product = argumentA * argumentB
+            sum += product
+            print("{}|{}|{}|{}|\n".format(argumentB, argumentA, product, sum))
 
+    # print("Row 2")
+    # print("Input Coef | Weight Coef | Product | Accumulation |")
+    # sum = 0
+    # for i in range(len(weight_matrix[2])):
+    #     argumentA = weight_matrix[2][i]
+    #     argumentB = inputs[i]
+    #     product = argumentA * argumentB
+    #     sum += product
+    #     print("{}|{}|{}|{}|\n".format(argumentB, argumentA, product, sum))
 
-    
     return
 
 main()
