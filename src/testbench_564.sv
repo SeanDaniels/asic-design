@@ -59,7 +59,7 @@ module tb_top();
   //sram for inputs
    sram  #(.ADDR_WIDTH    (12),
            .DATA_WIDTH    (16),
-           .MEM_INIT_FILE ("564_final_inputs_0.dat"        ))
+           .MEM_INIT_FILE ("inupt_sram.dat"        ))
    input_mem  (
                .write_enable ( 1'b0  ),
                .write_address( 12'b0 ),
@@ -73,7 +73,7 @@ module tb_top();
   //sram for weights
   sram  #(.ADDR_WIDTH    (12),
           .DATA_WIDTH    (16),
-          .MEM_INIT_FILE ("564_final_weights_0.dat"           ))
+          .MEM_INIT_FILE ("weight_sram.dat"           ))
           weight_mem  (
           .write_enable ( 1'b0                     ),
           .write_address( 12'b0                    ),
@@ -141,8 +141,8 @@ module tb_top();
       reset_b=1;
      for(j=0;j<ROUND;j=j+1) begin
         if(j!=0) wait(checkFinish[j-1]);
-        input_mem.loadInitFile($sformatf("inputs/564_final_inputs_%0d.dat",j));//564_final_inputs_1.dat for second run
-        weight_mem.loadInitFile($sformatf("inputs/564_final_weights_%0d.dat",j));//564_final_weights_0.dat for second run
+        input_mem.loadInitFile("inputs/input_sram.dat");//564_final_inputs_1.dat for second run
+        weight_mem.loadInitFile("inputs/weight_sram.dat");//564_final_weights_0.dat for second run
         repeat(5) @(posedge clk);
         wait(dut_busy==0);
          @(posedge clk);
