@@ -25,7 +25,7 @@ module project(
 //   reg [15:0]                    counter = 16'b0;
  //  reg [5:0]                     sram_read_count = 6'b0;
    reg [15:0]                    number_of_input_reads = 0, number_of_weight_reads = 0;
-   reg [15:0]                    number_of_input_reads_needed = 16'd0;
+   reg [15:0]                    number_of_input_reads_needed = 16'd0, number_of_weight_reads_needed = 16'd0;
    reg [127:0]                   accumulated_inputs = 128'd0;
    reg [15:0]                    weight_coef = 16'b0, input_coef = 16'b0;
    reg                           process_flag;
@@ -158,8 +158,31 @@ module project(
             begin
                if(sync_flag < 3'd2)begin
                   if(sync_flag == 3'd0)begin
-                     number_of_input_reads <= number_of_input_reads;
-                     number_of_weight_reads <= number_of_weight_reads;
+                     if(all_done == 1'b1)begin
+                        number_of_input_reads <= number_of_input_reads + 1'b1;
+                        number_of_weight_reads <= number_of_weight_reads + 1'b1;
+                        size_of_inputs = 0;
+                        size_of_weights = 0;
+                        number_of_inputs = 0;
+                        number_of_input_reads_needed = 0;
+                        number_of_rows_accumulated = 0;
+                        accumulated_inputs <= 128'd0;
+                        row_weight_bits_read <= 0;
+                        weight_coef = 0;
+                        input_coef = 0;
+                        weight_matrix_dimensions = 0;
+                        all_done = 1'b0;
+                     end
+                     else begin
+                        number_of_input_reads <= number_of_input_reads;
+                        number_of_weight_reads <= number_of_weight_reads;
+                        accumulated_inputs <= 128'd0;
+                        row_weight_bits_read <= 0;
+                        weight_coef = 0;
+                        input_coef = 0;
+                        weight_matrix_dimensions = 0;
+                        number_of_weight_reads_needed = 0;
+                     end
                   end
                   sync_flag = sync_flag + 3'd1;
                   secondary_state_machine_next_state <= SYNC_READ;
@@ -194,16 +217,16 @@ module project(
                 get_size_inputs = 1'b0;
                 case(size_of_inputs)
                   2:begin
-                     number_of_input_reads_needed = (number_of_inputs >> 3);
+                     number_of_input_reads_needed = number_of_input_reads + (number_of_inputs >> 3);
                   end
                   4:begin
-                     number_of_input_reads_needed = (number_of_inputs >> 2);
+                     number_of_input_reads_needed = number_of_input_reads + (number_of_inputs >> 2);
                   end
                   8:begin
-                     number_of_input_reads_needed = (number_of_inputs >> 1);
+                     number_of_input_reads_needed = number_of_input_reads + (number_of_inputs >> 1);
                   end
                   default:begin
-                     number_of_input_reads_needed = size_of_inputs;
+                     number_of_input_reads_needed = number_of_input_reads + size_of_inputs;
                   end
                 endcase
                 $display("Current input read adress: %d", number_of_input_reads);
@@ -214,27 +237,28 @@ module project(
                 $display("Size of inputs: %d bits", size_of_weights);
                 get_size_weights = 1'b0;
                 weight_bits_per_row = size_of_weights * weight_matrix_dimensions;
+                number_of_weight_reads_needed = weight_bits_per_row[15:0] + 1'b1;
                 number_of_weight_reads <= number_of_weight_reads+1'b1;
              end
              secondary_state_machine_next_state <= COLLECT_INPUTS;
              sync_flag = 3'd1;
           end
           COLLECT_INPUTS: begin
-             $display("Number of memory reads: %d", number_of_input_reads);
-             $display("Number of memory reads needed: %d", number_of_input_reads_needed);
+             $display("Number of input reads: %d", number_of_input_reads);
+             $display("Number of input reads needed: %d", number_of_input_reads_needed);
              if(sync_flag == 3'd1)begin
                 sync_flag = 3'd0;
                 number_of_input_reads <= number_of_input_reads + 1'b1;
                 secondary_state_machine_next_state <= COLLECT_INPUTS;
                 end
              else begin
-                if(number_of_input_reads>number_of_input_reads_needed)begin
+                if(number_of_input_reads>=number_of_input_reads_needed)begin
+                   accumulated_inputs <= {accumulated_inputs, input_input[7:0], input_input[15:8]};
                    input_read_complete_signal = 1'b1;
                    secondary_state_machine_next_state <= MAC;
                    total_weight_bits_read = 256'd0;
                    current_weight_bits = weight_input;
                    start_mac = 1'b1;
-                   accumulated_inputs <= {accumulated_inputs, input_input[7:0], input_input[15:8]};
                 end
                 else begin
                    start_mac = 1'b0;
@@ -248,14 +272,18 @@ module project(
              if(start_mac==1'b1)begin
                 $display("Current weight bits: %d", current_weight_bits);
                 if(all_done == 1'b1)begin
-                   all_done = 1'b0;
+                   //all_done = 1'b0;
+                   $display("Number of rows accumulated: %d", number_of_rows_accumulated);
                    value_to_write_to_golden_output <= accumulation;
+                   secondary_state_machine_next_state <= WRITE_RESULT;
                 end
                 else begin
                    get_next_weight_read = 1'b1;
                    start_mac = 1'b0;
                    row_weight_bits_read = 0;
-                   number_of_weight_reads <= number_of_weight_reads + 1'b1;
+                   if(number_of_weight_reads<number_of_weight_reads_needed)begin
+                      number_of_weight_reads <= number_of_weight_reads + 1'b1;
+                   end
                    product = 35'b0;
                    if(size_of_weights==2)begin
                       weight_bit_start_index = 1;
@@ -273,6 +301,10 @@ module project(
                       weight_row_done = 1'b0;
                       value_to_write_to_golden_output <= accumulation;
                       accumulation <= 0;
+                      if(number_of_weight_reads>number_of_input_reads_needed)begin
+                         accumulation <= 0;
+                         secondary_state_machine_next_state <= SYNC_READ;
+                      end
                    end
                 end
              end
@@ -330,20 +362,19 @@ module project(
                 number_of_mac_runs = number_of_mac_runs + 1;
                 product <= 0;
                 product <= weight_coef*input_coef;
+                //read 16 bits, must read another 16 bits
                 if(row_weight_bits_read == 16)begin
                    get_next_weight_read = 1'b0;
                    current_weight_bits = weight_input;
-                   $display("New weight bits: %d", current_weight_bits);
                    row_weight_bits_read = 6'd0;
                    start_mac = 1'b1;
                    secondary_state_machine_next_state <= MAC;
                 end
+                //read size of elements * number of elements bits, entire row done
                 if(total_weight_bits_read==weight_bits_per_row)begin
-                   $display("Total weight bits read: %d", total_weight_bits_read);
-                   $display("Weight bits per row: %d", weight_bits_per_row);
                    weight_row_done = 1'b1;
                    total_weight_bits_read <= 256'd0;
-                   number_of_rows_accumulated <= number_of_rows_accumulated + 1;
+                   number_of_rows_accumulated = number_of_rows_accumulated + 1;
                    if(number_of_rows_accumulated<weight_matrix_dimensions)begin
                       current_weight_bits = weight_input;
                       start_mac = 1'b1;
@@ -352,9 +383,9 @@ module project(
                    end
                    else begin
                       current_weight_bits = 0;
-                      start_mac = 1'b0;
+                      start_mac = 1'b1;
+                      write_flag = 1'b1;
                       all_done = 1'b1;
-                      secondary_state_machine_next_state <= MAC;
                    end
                    number_of_mac_runs = 0;
                 end
@@ -367,9 +398,13 @@ module project(
                 dut_sram_write_address = result_address;
                 dut_sram_write_data = value_to_write_to_golden_output[15:0];
                 result_address <= result_address + 12'd1;
+                if(all_done == 1'b0)begin
+                   secondary_state_machine_next_state = MAC;
+                end
+                else begin
+                   secondary_state_machine_next_state = SYNC_READ;
+                   end
              end
-             secondary_state_machine_next_state = MAC;
-
              end
           IDLE: begin
              idle_process_signal <= 1'b1;

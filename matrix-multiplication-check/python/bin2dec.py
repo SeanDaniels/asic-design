@@ -137,6 +137,7 @@ def main():
     for i in range(len(weight_matrix)):
         print("Row {}: {}\n".format(i, weight_matrix[i]))
 
+    productList = []
     for j in range(len(weight_matrix)):
         print("Row {}".format(j))
         print("Input Coef | Weight Coef | Product | Accumulation |")
@@ -147,7 +148,9 @@ def main():
             product = argumentA * argumentB
             sum += product
             print("{}|{}|{}|{}|\n".format(argumentB, argumentA, product, sum))
+        productList.append(sum)
 
+    print(productList)
     # print("Row 2")
     # print("Input Coef | Weight Coef | Product | Accumulation |")
     # sum = 0

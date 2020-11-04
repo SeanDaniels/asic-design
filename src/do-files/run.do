@@ -1,3 +1,3 @@
 project compileall
 restart
-run 3600ps
+run 2000ps
