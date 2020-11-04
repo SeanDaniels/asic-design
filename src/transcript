@@ -8767,3 +8767,5 @@ run
 # Number of input reads needed:    19
 # Current weight bits: 13922
 write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/wave.do
+# End time: 08:16:34 on Nov 04,2020, Elapsed time: 23:30:30
+# Errors: 0, Warnings: 1

@@ -14,4 +14,11 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	sram
 
+} {} {}} C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/project.v {1 {vlog -work work -stats=none C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/project.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module project
+
+Top level modules:
+	project
+
 } {} {}}
