@@ -173,3 +173,8 @@ Hope this makes sense. Let me know if you need further clarification. TBH, decip
 |    14 |       2 | 0 |               |
 |    15 |       3 | 0 |               |
 |    16 |     3?? | 1 |               |
+* Current Problems
+- The weight_coefficient bits aren't loading at the right time
+- weight input from sram is updated by incrementing the number of weight reads
+* SYNC_READ
+- In this state for 4 clock cycles

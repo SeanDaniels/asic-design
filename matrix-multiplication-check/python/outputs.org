@@ -1,0 +1,325 @@
+{'start': 232, 'end': 488, 'dimension': 32, 'size': 4, 'number elements': 1024}
+Input info
+{'start': 28, 'end': 36, 'size': 4, 'elements': 32}
+* Matrix 1
+- Matrix Info:
+    {'start': 2, 'end': 34, 'dimension': 16, 'size': 2, 'number elements': 256}
+- Input Info:
+    {'start': 2, 'end': 10, 'size': 8, 'elements': 16}
+- Results of Matrix 1 and Input 1:
+    [309, 451, 383, 288, 271, 279, 354, 330, 295, 488, 238, 276, 196, 256, 318, 294]
+** Matrix 1, row 1
+-
+2 * 1 = 2
+Accumulation: 2
+
+32 * 1 = 32
+Accumulation: 34
+
+91 * 1 = 91
+Accumulation: 125
+
+23 * 1 = 23
+Accumulation: 148
+
+89 * 1 = 89
+Accumulation: 237
+
+56 * 0 = 0
+Accumulation: 237
+
+38 * 0 = 0
+Accumulation: 237
+
+35 * 0 = 0
+Accumulation: 237
+
+3 * 0 = 0
+Accumulation: 237
+
+7 * 0 = 0
+Accumulation: 237
+
+52 * 0 = 0
+Accumulation: 237
+
+31 * 0 = 0
+Accumulation: 237
+
+72 * 0 = 0
+Accumulation: 237
+
+72 * 1 = 72
+Accumulation: 309
+
+53 * 0 = 0
+Accumulation: 309
+
+5 * 0 = 0
+Accumulation: 309
+** Matrix 1, row 2
+2 * 0 = 0
+Accumulation: 0
+
+32 * 0 = 0
+Accumulation: 0
+
+91 * 1 = 91
+Accumulation: 91
+
+23 * 0 = 0
+Accumulation: 91
+
+89 * 1 = 89
+Accumulation: 180
+
+56 * 0 = 0
+Accumulation: 180
+
+38 * 0 = 0
+Accumulation: 180
+
+35 * 1 = 35
+Accumulation: 215
+
+3 * 1 = 3
+Accumulation: 218
+
+7 * 0 = 0
+Accumulation: 218
+
+52 * 0 = 0
+Accumulation: 218
+
+31 * 1 = 31
+Accumulation: 249
+
+72 * 1 = 72
+Accumulation: 321
+
+72 * 1 = 72
+Accumulation: 393
+
+53 * 1 = 53
+Accumulation: 446
+
+5 * 1 = 5
+Accumulation: 451
+
+* Matrix 2
+{'start': 12, 'end': 20, 'size': 8, 'elements': 16}
+{'start': 36, 'end': 100, 'dimension': 16, 'size': 4, 'number elements': 256}
+- Input 2:
+    [2, 6, 6, 3, 6, 6, 0, 3, 6, 6, 2, 5, 0, 0, 6, 5]
+- Result of Matrix 2 and Input 2:
+    [3103, 2606, 2111, 2364, 3193, 2243, 2258, 3683, 2902, 1792, 3512, 2834, 3494, 2835, 1950, 2355]
+** Matrix 2, Row 1
+- Matrix row:
+  [59, 59, 16, 7, 99, 22, 5, 55, 8, 28, 75, 94, 64, 76, 52, 95]
+- Inputs:
+  [2, 6, 6, 3, 6, 6, 0, 3, 6, 6, 2, 5, 0, 0, 6, 5]
+59 * 2 = 118
+118
+
+59 * 6 = 354
+472
+
+16 * 6 = 96
+568
+
+7 * 3 = 21
+589
+
+99 * 6 = 594
+1183
+
+22 * 6 = 132
+1315
+
+5 * 0 = 0
+1315
+
+55 * 3 = 165
+1480
+
+8 * 6 = 48
+1528
+
+28 * 6 = 168
+1696
+
+75 * 2 = 150
+1846
+
+94 * 5 = 470
+2316
+
+64 * 0 = 0
+2316
+
+76 * 0 = 0
+2316
+
+52 * 6 = 312
+2628
+
+95 * 5 = 475
+3103
+** Matrix 2, Row 7
+59 * 1 = 59
+Accumulation: 59
+
+59 * 6 = 354
+Accumulation: 413
+
+16 * 4 = 64
+Accumulation: 477
+
+7 * 2 = 14
+Accumulation: 491
+
+99 * 5 = 495
+Accumulation: 986
+
+22 * 3 = 66
+Accumulation: 1052
+
+5 * 2 = 10
+Accumulation: 1062
+
+55 * 6 = 330
+Accumulation: 1392
+
+8 * 3 = 24
+Accumulation: 1416
+
+28 * 2 = 56
+Accumulation: 1472
+
+75 * 5 = 375
+Accumulation: 1847
+
+94 * 6 = 564
+Accumulation: 2411
+
+64 * 6 = 384
+Accumulation: 2795
+
+76 * 6 = 456
+Accumulation: 3251
+
+52 * 1 = 52
+Accumulation: 3303
+
+95 * 4 = 380
+Accumulation: 3683
+*
+* Matrix 3
+- Input Info:
+    {'start': 22, 'end': 26, 'size': 2, 'elements': 32}
+- Matrix Info:
+    {'start': 102, 'end': 230, 'dimension': 32, 'size': 2, 'number elements': 1024}
+- Inputs of Matrix 3:
+  [0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0]
+- Results of Matrix 3 and Input 3:
+  [3, 4, 3, 5, 8, 6, 6, 5, 8, 4, 6, 5, 7, 4, 5, 4, 2, 4, 6, 3, 5, 6, 7, 8, 5, 5, 8, 6, 1, 1, 3, 5]
+** Matrix 3, Row 1
+- Input Info:
+  [0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0]
+- Row 1
+
+0 * 0 = 0
+Accumulation: 0
+
+1 * 0 = 0
+Accumulation: 0
+
+0 * 0 = 0
+Accumulation: 0
+
+0 * 0 = 0
+Accumulation: 0
+
+1 * 0 = 0
+Accumulation: 0
+
+0 * 1 = 0
+Accumulation: 0
+
+0 * 0 = 0
+Accumulation: 0
+
+0 * 0 = 0
+Accumulation: 0
+
+0 * 1 = 0
+Accumulation: 0
+
+0 * 1 = 0
+Accumulation: 0
+
+1 * 0 = 0
+Accumulation: 0
+
+0 * 1 = 0
+Accumulation: 0
+
+0 * 0 = 0
+Accumulation: 0
+
+0 * 1 = 0
+Accumulation: 0
+
+0 * 1 = 0
+Accumulation: 0
+
+1 * 0 = 0
+Accumulation: 0
+
+1 * 0 = 0
+Accumulation: 0
+
+0 * 0 = 0
+Accumulation: 0
+
+0 * 0 = 0
+Accumulation: 0
+
+0 * 1 = 0
+Accumulation: 0
+
+1 * 0 = 0
+Accumulation: 0
+
+0 * 1 = 0
+Accumulation: 0
+
+1 * 1 = 1
+Accumulation: 1
+
+0 * 1 = 0
+Accumulation: 1
+
+0 * 0 = 0
+Accumulation: 1
+
+1 * 0 = 0
+Accumulation: 1
+
+1 * 1 = 1
+Accumulation: 2
+
+0 * 1 = 0
+Accumulation: 2
+
+1 * 1 = 1
+Accumulation: 3
+
+0 * 1 = 0
+Accumulation: 3
+
+0 * 0 = 0
+Accumulation: 3
+
+0 * 0 = 0
+Accumulation: 3
