@@ -1098,3 +1098,23 @@ run
 run
 run
 run
+do ./do-files/run.do
+# Compile of project.v was successful with warnings.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful with warnings.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : inputs/input_sram.dat 
+# INFO::readmem : inputs/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+run
+run
