@@ -1,4 +1,3 @@
-import numpy as np
 
 def convert(b):
     # print("Value passed for conversion: {}\n".format(b))
@@ -269,30 +268,35 @@ def main():
     # for i in range(len(productList)):
     #     print(productList[i])
     #     print(orderedOutputs[i])
-
+    print("Run 1")
     print(inputs[0])
-    print(weight_matrix[0][0])
     print(productList[0])
+    print(orderedOutputs[0])
+    print("Run 2")
     print(inputs[1])
-    print(weight_matrix[1][0])
     print(productList[1])
+    print(orderedOutputs[1])
+    print("Run 3")
     print(inputs[2])
-    print(weight_matrix[2][0])
     print(productList[2])
     print(orderedOutputs[2])
+    print("Run 4")
+    print(inputs[3])
+    print(productList[3])
+    print(orderedOutputs[3])
 
     sum = 0
     accum = []
-    run = 2
+    run = 4
     run_row = 0
-    for x in range(len(inputs[run])):
-        row = weight_matrix[run][run_row]
-        argA = inputs[run][x]
-        argB = row[x]
+    matrix_row = weight_matrix[3][0]
+    for x in range(len(inputs[3])):
+        argA = inputs[3][x]
+        argB = matrix_row[x]
         prod = argA * argB
         sum+=prod
-        print("{} * {} = {}\nAccumulation: {}\n".format(argA, argB, prod, sum))
-    print(accum)
+        print("(Input){} * (Weight){} = {}\nAccumulation: {}\n".format(argA, argB, prod, sum))
+    print(sum)
     return
 
 main()

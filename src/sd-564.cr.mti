@@ -1,15 +1,15 @@
-C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv {2 {vlog -work work -sv -stats=none C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv
+C:/Users/Sean/Desktop/projects/verilog-projects/asic-design/src/testbench_564.sv {2 {vlog -work work -sv -stats=none C:/Users/Sean/Desktop/projects/verilog-projects/asic-design/src/testbench_564.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module project
-** Warning: ** while parsing file included at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(1)
-** at project.v(655): (vlog-2182) 'clear_accumulation' might be read before written in always_comb or always @* block.
+** Warning: ** while parsing file included at C:/Users/Sean/Desktop/projects/verilog-projects/asic-design/src/testbench_564.sv(1)
+** at project.v(657): (vlog-2182) 'clear_accumulation' might be read before written in always_comb or always @* block.
 -- Compiling module sram
 -- Compiling module tb_top
 
 Top level modules:
 	tb_top
 
-} {} {}} C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/sram.sv {1 {vlog -work work -sv -stats=none C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/sram.sv
+} {} {}} C:/Users/Sean/Desktop/projects/verilog-projects/asic-design/src/sram.sv {1 {vlog -work work -sv -stats=none C:/Users/Sean/Desktop/projects/verilog-projects/asic-design/src/sram.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module sram
 

@@ -208,9 +208,11 @@ module project(
                 number_of_accumulated_input_bits <= size_of_inputs * number_of_inputs - 1'b1;
                 if(size_of_inputs == 2)begin
                    number_of_input_reads_needed <= (number_of_inputs >> 3) - 2;
+                   accumulated_inputs <= {accumulated_inputs, input_input[1:0], input_input[3:2], input_input[5:4], input_input[7:6], input_input[9:8], input_input[11:10], input_input[13:12], input_input[15:14]};
                 end
                 if(size_of_inputs == 4)begin
                    number_of_input_reads_needed <= (number_of_inputs >> 2) - 2;
+                   accumulated_inputs <= {accumulated_inputs, input_input[3:0], input_input[7:4], input_input[11:8], input_input[15:12]};
                 end
                 if(size_of_inputs == 8)begin
                    number_of_input_reads_needed <= (number_of_inputs >> 1) - 2;
@@ -222,7 +224,15 @@ module project(
              end
              if(setup_count == 3'b101)begin
                 setup_count <= setup_count + 1'b1;
-                accumulated_inputs <= {accumulated_inputs, input_input[7:0], input_input[15:8]};
+                if(size_of_inputs == 8)begin
+                   accumulated_inputs <= {accumulated_inputs, input_input[7:0], input_input[15:8]};
+                end
+                if(size_of_inputs == 4)begin
+                   accumulated_inputs <= {accumulated_inputs, input_input[3:0], input_input[7:4], input_input[11:8], input_input[15:12]};
+                end
+                if(size_of_inputs == 2)begin
+                   accumulated_inputs <= {accumulated_inputs, input_input[1:0], input_input[3:2], input_input[5:4], input_input[7:6], input_input[9:8], input_input[11:10], input_input[13:12], input_input[15:14]};
+                end
                 if(number_of_input_reads_needed > 0)begin
                    number_of_input_reads_needed <= number_of_input_reads_needed - 1'b1;
                    setup_count <= setup_count;
@@ -326,6 +336,8 @@ module project(
                         row_weight_bits_read = row_weight_bits_read + 16;
                         weight_coef_bits_read = weight_coef_bits_read + 16;
                      end
+
+                     $display("Input coef.: %d  Weight coef. %d",input_coef, weight_coef);
 
                      // ** get product ** //
                      temp_product = input_coef * weight_coef;
