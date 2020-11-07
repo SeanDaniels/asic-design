@@ -24,6 +24,7 @@ module tb_top();
   time startTime[ROUND];
   time endTime[ROUND];
   
+
   int correctResult[ROUND];
   reg [15:0] result_array[int];
   reg [15:0] golden_result_array[int];
@@ -50,7 +51,7 @@ module tb_top();
   wire [15:0]                              sram_dut_read_data     ;
   //-----------------------weights ------------------------------------------                                         
   wire [11:0]                              dut_wmem_read_address    ;
-  wire [15:0]                              wmem_dut_read_data       ;  // read data
+  wire [15:0]                              wmem_dut_read_data       ; // read data
   
   //---------------------------------------------------------------------------
   //---------------------------------------------------------------------------
@@ -175,40 +176,40 @@ module tb_top();
   // Result collector 
   // Collect your compute results 
 
-   // initial begin
-   //    for(q=0;q<ROUND;q=q+1) begin
-   //       wait(computeEnd[q]);
-   //       repeat(10) @(posedge clk);
-   //       $display("-------------------------------Round %0d check start-------------------------------\n",q);
-   //       $display("-------------------------------store results to g_result.dat-------------------------------\n");
-   //       $writememb($sformatf("result.dat",q),output_mem.mem,12'h000,RESULT_ADDR);
-   //       repeat(10) @(posedge clk);
+   initial begin
+      for(q=0;q<ROUND;q=q+1) begin
+         wait(computeEnd[q]);
+         repeat(10) @(posedge clk);
+         $display("-------------------------------Round %0d check start-------------------------------\n",q);
+         $display("-------------------------------store results to g_result.dat-------------------------------\n");
+         $writememb("outputs/result.dat",output_mem.mem,12'h000,RESULT_ADDR);
+         repeat(10) @(posedge clk);
 
-   //       //---------------------------------------------------------------------------
-   //       //---------------------------------------------------------------------------
-   //       // Result comparator
-   //       // Compare your compute results with the results computed by Python script
-   //       $display("-------------------------------load results to output_array-------------------------------\n");
-   //       $readmemb($sformatf("result.dat",q),result_array);
+         //---------------------------------------------------------------------------
+         //---------------------------------------------------------------------------
+         // Result comparator
+         // Compare your compute results with the results computed by Python script
+         $display("-------------------------------load results to output_array-------------------------------\n");
+         $readmemb("outputs/result.dat",result_array);
 
-   //       $display("-------------------------------load results to golden_output_array-------------------------------\n");
-   //       $readmemb($sformatf("564_final_outputs_0.dat",q),golden_result_array);//564_final_outputs_1.dat for second run
+         $display("-------------------------------load results to golden_output_array-------------------------------\n");
+         $readmemb("outputs/golden_outputs.dat",golden_result_array);
 
-   //       $display("-------------------------------Round %0d start compare -------------------------------\n",q);
-   //       for(i=0;i<NUM_RESULT;i=i+1) begin
-   //          if(result_array[i]==golden_result_array[i]) correctResult[q]=correctResult[q]+1;
+         $display("-------------------------------Round %0d start compare -------------------------------\n",q);
+         for(i=0;i<NUM_RESULT;i=i+1) begin
+            if(result_array[i]==golden_result_array[i]) correctResult[q]=correctResult[q]+1;
 
-   //       end
+         end
 
-   //       $display("-------------------------------Round %0d Your report-------------------------------\n",q);
-   //       $display("Check 1 : Correct g results = %0d/%0d",correctResult[q],NUM_RESULT);
+         $display("-------------------------------Round %0d Your report-------------------------------\n",q);
+         $display("Check 1 : Correct g results = %0d/%0d",correctResult[q],NUM_RESULT);
 
-   //       $display("computeCycle=%0d",computeCycle[q]/(2*CLK_PHASE));
-   //       $display("---------------------------------------------------------------------------------\n");
-   //       @(posedge clk);
-   //       ->checkFinish[q];
-   //    end
-   //    $finish;
-   // end
+         $display("computeCycle=%0d",computeCycle[q]/(2*CLK_PHASE));
+         $display("---------------------------------------------------------------------------------\n");
+         @(posedge clk);
+         ->checkFinish[q];
+      end
+      $finish;
+   end
   
 endmodule

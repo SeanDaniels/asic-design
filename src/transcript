@@ -4,321 +4,749 @@
 # 3 compiles, 0 failed with no errors.
 vsim work.tb_top
 # vsim work.tb_top 
-# Start time: 11:26:13 on Nov 06,2020
+# Start time: 14:57:31 on Nov 07,2020
 # Loading sv_std.std
 # Loading work.tb_top
 # Loading work.sram
 # Loading work.project
-do C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/wave.do
-# ** Error: invalid command name "checkFinish"
-# Error in macro C:\Users\seanw\Desktop\projects\verilog-projets\asic-design\src\wave.do line 1
-# invalid command name "checkFinish"
-#     while executing
-# "checkFinish = <no-events>"
-do C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/wave.do
-# ** Error: invalid command name "clk"
-# Error in macro C:\Users\seanw\Desktop\projects\verilog-projets\asic-design\src\wave.do line 1
-# invalid command name "clk"
-#     while executing
-# "clk = 0"
-do C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/do-files/wave3.do
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Sean  Hostname: TPWEN  ProcessID: 24688
-#           Attempting to use alternate WLF file "./wlft4w15xz".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft4w15xz
-# ** UI-Msg: (vish-4014) No objects found matching '/tb_top/dut/input_value'.
-# Executing ONERROR command at macro C:\Users\seanw\Desktop\projects\verilog-projets\asic-design\src\do-files\wave3.do line 13
-# ** UI-Msg: (vish-4014) No objects found matching '/tb_top/dut/weight_value'.
-# Executing ONERROR command at macro C:\Users\seanw\Desktop\projects\verilog-projets\asic-design\src\do-files\wave3.do line 14
-add wave sim:/tb_top/dut/*
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/do-files/check.do
-run
+run 100ns
 # -------------------------------start_simulation-------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
 # -------------------------------Round 0 start-------------------------------
 # 
-run
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
+# -------------------------------Round 0 check start-------------------------------
 # 
+# -------------------------------store results to g_result.dat-------------------------------
 # 
-# -------------------------------start_simulation-------------------------------
+# -------------------------------load results to output_array-------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
+# -------------------------------load results to golden_output_array-------------------------------
 # 
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
+# -------------------------------Round 0 start compare -------------------------------
 # 
+# -------------------------------Round 0 Your report-------------------------------
 # 
-# -------------------------------start_simulation-------------------------------
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
 # 
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
+run 100ns
+# -------------------------------Round 1 check start-------------------------------
 # 
+# -------------------------------store results to g_result.dat-------------------------------
 # 
-# -------------------------------start_simulation-------------------------------
+# -------------------------------load results to output_array-------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
+# -------------------------------load results to golden_output_array-------------------------------
 # 
-add wave -position insertpoint  \
-sim:/tb_top/clk
-add wave -position insertpoint  \
-sim:/tb_top/dut/next_y_address
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
+# -------------------------------Round 1 start compare -------------------------------
 # 
+# -------------------------------Round 1 Your report-------------------------------
 # 
-# -------------------------------start_simulation-------------------------------
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run
-run
-run
-run
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run -continue
-run
-run
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-add wave -position insertpoint  \
-sim:/tb_top/dut/weight_row_done
-run
-run
-run
-run
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run
-run
-run
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-do ./do-files/run.do
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
+project compileall
 # Compile of project.v failed with 2 errors.
 # Compile of sram.sv was successful.
 # Compile of testbench_564.sv failed with 2 errors.
 # 3 compiles, 2 failed with 4 errors.
+project compileall
+# Compile of project.v was successful with warnings.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful with warnings.
+# 3 compiles, 0 failed with no errors.
+project compileall
+# Compile of project.v was successful with warnings.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful with warnings.
+# 3 compiles, 0 failed with no errors.
+restart -force
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # Loading work.tb_top
 # Loading work.sram
+# Loading work.project
+run 100ns
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
 # -------------------------------start_simulation-------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
 # -------------------------------Round 0 start-------------------------------
 # 
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+run 100ns
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
+project compileall
+# Compile of project.v was successful with warnings.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful with warnings.
+# 3 compiles, 0 failed with no errors.
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+run 200ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
+project compileall
+# Compile of project.v was successful with warnings.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful with warnings.
+# 3 compiles, 0 failed with no errors.
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+run 200ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
+project compileall
+# Compile of project.v was successful with warnings.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful with warnings.
+# 3 compiles, 0 failed with no errors.
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+run 200ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
+project compileall
+# Compile of project.v was successful with warnings.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful with warnings.
+# 3 compiles, 0 failed with no errors.
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+run 200ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
+project compileall
+# Compile of project.v was successful with warnings.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful with warnings.
+# 3 compiles, 0 failed with no errors.
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+run 200ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
+project compileall
+# Compile of project.v failed with 1 errors.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv failed with 1 errors.
+# 3 compiles, 2 failed with 2 errors.
+project compileall
+# Compile of project.v was successful with warnings.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful with warnings.
+# 3 compiles, 0 failed with no errors.
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+run 200ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
+project compileall
+# Compile of project.v was successful with warnings.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful with warnings.
+# 3 compiles, 0 failed with no errors.
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+run 200ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
+project compileall
+# Compile of project.v was successful with warnings.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful with warnings.
+# 3 compiles, 0 failed with no errors.
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+run 200ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
+restart -force
+project compileall
+# Compile of project.v was successful with warnings.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful with warnings.
+# 3 compiles, 0 failed with no errors.
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+run 200ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
+project compileall
+# Compile of project.v failed with 1 errors.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv failed with 1 errors.
+# 3 compiles, 2 failed with 2 errors.
+project compileall
+# Compile of project.v was successful with warnings.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful with warnings.
+# 3 compiles, 0 failed with no errors.
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.project
+run 200ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
+run -all
+# Break key hit
+# Simulation stop requested.
+
+run finish
+# Invalid time value: finish
+run $finish
+# can't read "finish": no such variable
 do ./do-files/run.do
 # Compile of project.v was successful with warnings.
 # Compile of sram.sv was successful.
@@ -333,11 +761,50 @@ do ./do-files/run.do
 # 
 # -------------------------------start_simulation-------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
 # -------------------------------Round 0 start-------------------------------
 # 
-run
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
 do ./do-files/run.do
 # Compile of project.v was successful with warnings.
 # Compile of sram.sv was successful.
@@ -352,15 +819,50 @@ do ./do-files/run.do
 # 
 # -------------------------------start_simulation-------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
 # -------------------------------Round 0 start-------------------------------
 # 
-run
-run
-run
-run
-run
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
 do ./do-files/run.do
 # Compile of project.v was successful with warnings.
 # Compile of sram.sv was successful.
@@ -375,14 +877,107 @@ do ./do-files/run.do
 # 
 # -------------------------------start_simulation-------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
 # -------------------------------Round 0 start-------------------------------
 # 
-run
-run
-run
-run
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
+do ./do-files/run.do
+# Compile of project.v failed with 1 errors.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv failed with 1 errors.
+# 3 compiles, 2 failed with 2 errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
 do ./do-files/run.do
 # Compile of project.v was successful with warnings.
 # Compile of sram.sv was successful.
@@ -397,10 +992,50 @@ do ./do-files/run.do
 # 
 # -------------------------------start_simulation-------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
 # -------------------------------Round 0 start-------------------------------
 # 
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
 do ./do-files/run.do
 # Compile of project.v was successful with warnings.
 # Compile of sram.sv was successful.
@@ -415,10 +1050,50 @@ do ./do-files/run.do
 # 
 # -------------------------------start_simulation-------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
 # -------------------------------Round 0 start-------------------------------
 # 
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
 do ./do-files/run.do
 # Compile of project.v was successful with warnings.
 # Compile of sram.sv was successful.
@@ -433,10 +1108,50 @@ do ./do-files/run.do
 # 
 # -------------------------------start_simulation-------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
 # -------------------------------Round 0 start-------------------------------
 # 
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
 do ./do-files/run.do
 # Compile of project.v was successful with warnings.
 # Compile of sram.sv was successful.
@@ -451,26 +1166,50 @@ do ./do-files/run.do
 # 
 # -------------------------------start_simulation-------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
 # -------------------------------Round 0 start-------------------------------
 # 
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
 do ./do-files/run.do
 # Compile of project.v was successful with warnings.
 # Compile of sram.sv was successful.
@@ -485,636 +1224,47 @@ do ./do-files/run.do
 # 
 # -------------------------------start_simulation-------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
 # -------------------------------Round 0 start-------------------------------
 # 
-restart
-run
-run
-run
-run
-run
-run
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
+# -------------------------------Round 0 check start-------------------------------
 # 
+# -------------------------------store results to g_result.dat-------------------------------
 # 
-# -------------------------------start_simulation-------------------------------
+# -------------------------------load results to output_array-------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
+# -------------------------------load results to golden_output_array-------------------------------
 # 
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-restart
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
+# -------------------------------Round 0 start compare -------------------------------
 # 
+# -------------------------------Round 0 Your report-------------------------------
 # 
-# -------------------------------start_simulation-------------------------------
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
 # 
-run 300ps
-run
-run
-run
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
+# -------------------------------Round 1 check start-------------------------------
 # 
+# -------------------------------store results to g_result.dat-------------------------------
 # 
-# -------------------------------start_simulation-------------------------------
+# -------------------------------load results to output_array-------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
+# -------------------------------load results to golden_output_array-------------------------------
 # 
-run 2500ps
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
+# -------------------------------Round 1 start compare -------------------------------
 # 
+# -------------------------------Round 1 Your report-------------------------------
 # 
-# -------------------------------start_simulation-------------------------------
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
 # 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run
-run
-run
-run
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run
-run
-run
-run
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run
-run
-run
-run
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run
-run
-run
-run
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run 1800ps
-run
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run 600ps
-run 600ps
-run
-run
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-add wave -position insertpoint  \
-sim:/tb_top/dut/matrix_complete
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run
-run
-run
-run -continue
-run -continue
-run -continue
-run -continue
-run -continue
-run -continue
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run
-add wave -position insertpoint  \
-sim:/tb_top/dut/temp_product
-run
-run
-run
-run
-run
-run
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/do-files/temp.do
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-run
-do ./do-files/run.do
-# Compile of project.v was successful with warnings.
-# Compile of sram.sv was successful.
-# Compile of testbench_564.sv was successful with warnings.
-# 3 compiles, 0 failed with no errors.
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.tb_top
-# Loading work.sram
-# Loading work.project
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# -------------------------------start_simulation-------------------------------
-# 
-# INFO::readmem : inputs/input_sram.dat 
-# INFO::readmem : inputs/weight_sram.dat 
-# -------------------------------Round 0 start-------------------------------
-# 
-run
-run
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
