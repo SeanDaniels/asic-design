@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv {2 {vlog -work work -sv -stats=none C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module ECE564MyDesign
@@ -10,6 +11,9 @@ Top level modules:
 	tb_top
 
 } {} {}} C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/sram.sv {1 {vlog -work work -sv -stats=none C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/sram.sv
+=======
+C:/Users/Sean/Desktop/projects/verilog-projects/asic-design/src/sram.sv {1 {vlog -work work -sv -stats=none C:/Users/Sean/Desktop/projects/verilog-projects/asic-design/src/sram.sv
+>>>>>>> a84bce06ae6d0f8e3aacc308ea6e6b8b8fbb9f01
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module sram
 
