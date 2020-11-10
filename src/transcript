@@ -7211,6 +7211,7 @@ do ./do-files/run.do
 # INFO::readmem : input_0/weight_sram.dat 
 # -------------------------------Round 0 start-------------------------------
 # 
+<<<<<<< Updated upstream
 # -------------------------------Round 0 check start-------------------------------
 # 
 # -------------------------------store results to g_result.dat-------------------------------
@@ -7251,3 +7252,9 @@ do ./do-files/run.do
 #    Time: 196715 ps  Iteration: 1  Instance: /tb_top
 # 1
 # Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
+=======
+run
+run
+# End time: 19:09:15 on Nov 06,2020, Elapsed time: 7:43:02
+# Errors: 0, Warnings: 1
+>>>>>>> Stashed changes
