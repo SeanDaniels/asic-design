@@ -7254,6 +7254,7 @@ do ./do-files/run.do
 # Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 run
 run
@@ -7264,6 +7265,8 @@ run
 =======
 >>>>>>> Stashed changes
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 # Compile of ECE564MyDesign.v was successful with warnings.
@@ -7289,6 +7292,9 @@ do ./do-files/run.do
 # -------------------------------Round 0 start-------------------------------
 # 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 # -------------------------------Round 0 check start-------------------------------
 # 
 # -------------------------------store results to g_result.dat-------------------------------
@@ -7332,6 +7338,7 @@ do ./do-files/run.do
 # End time: 18:00:25 on Nov 10,2020, Elapsed time: 3:20:22
 # Errors: 0, Warnings: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -7340,4 +7347,6 @@ run
 run
 # End time: 19:09:15 on Nov 06,2020, Elapsed time: 7:43:02
 # Errors: 0, Warnings: 1
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
