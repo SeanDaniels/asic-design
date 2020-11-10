@@ -2,77 +2,77 @@ m255
 K4
 z2
 !s11f vlog 2020.1 2020.02, Feb 28 2020
-13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/swd/intelFPGA_lite/20.1
-vproject
-Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z1 !s110 1604779997
+Z0 dC:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src
+vECE564MyDesign
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1605041589
 !i10b 1
-!s100 hWlLR@Y`4b2D?gV^OQ`Xz0
-Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I6[TQfHAhi26Oo2T0bgQjT0
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s100 cgWFSUfW:o]Fz6FLBgYN:1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ii<Ce19?zZVNcK7V_fI<kT0
+Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
-Z4 dC:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src
-w1604779994
-8project.v
-Fproject.v
-!i122 1824
-L0 1 393
+R0
+w1605041586
+8ECE564MyDesign.v
+FECE564MyDesign.v
+!i122 143
+L0 1 379
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1604779996.000000
-!s107 sram.sv|project.v|C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv|
+Z6 !s108 1605041589.000000
+!s107 sram.sv|ECE564MyDesign.v|C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv|
 Z7 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv|
 !i113 1
 Z8 o-work work -sv
 Z9 tCvgOpt 0
+n@e@c@e564@my@design
 vsram
-R0
 R1
+R2
 !i10b 1
 !s100 ;Q5bR9XgCF`hA6eMg6jn:3
-R2
-I]fgj[>D>gUA0FlNP7j3TY3
 R3
-S1
+I]fgj[>D>gUA0FlNP7j3TY3
 R4
+S1
+R0
 w1604070748
 8sram.sv
 Fsram.sv
-!i122 1824
+!i122 143
 L0 4 90
 R5
 r1
 !s85 0
 31
 R6
-Z10 !s107 sram.sv|project.v|C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv|
+Z10 !s107 sram.sv|ECE564MyDesign.v|C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv|
 R7
 !i113 1
 R8
 R9
 vtb_top
-R0
 R1
-!i10b 1
-!s100 AQA<EKZbbA`=a4g:S[@L70
 R2
-IeR4IJK^5iWD<Bh;MdYE_j2
+!i10b 1
+!s100 cPEL9a7=k1>]ghA:K1;E`2
 R3
-S1
+IDDneY>hjFe[dWaN:V0M[22
 R4
-w1604776757
+S1
+R0
+w1605035540
 8C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv
 FC:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv
-!i122 1824
+!i122 143
 L0 3 229
 R5
 r1

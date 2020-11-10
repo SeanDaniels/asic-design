@@ -1,4 +1,4 @@
-module project(
+module ECE564MyDesign(
                // control signals
                input wire        clk, // clock signal
                input             reset_b, // reset signal
@@ -12,16 +12,16 @@ module project(
                output reg [11:0] dut_sram_read_address,
                output reg [11:0] dut_wmem_read_address,
                input wire [15:0] wmem_dut_read_data,
-               input reg [15:0]  sram_dut_read_data
+               input wire [15:0]  sram_dut_read_data
                );
 
-   reg                           processing_done = 1'b0;
+   reg                            processing_done = 1'b0, pause_flag = 1'b0;
    reg [2:0]                     main_state_machine_current_state, main_state_machine_next_state;
 
 
    reg [15:0]                    input_input = 16'd0, weight_input = 16'd0, size_of_inputs = 16'b0, size_of_weights = 16'b0, number_of_inputs = 16'b0;
 
-   reg [15:0]                    next_x_address = 0, next_y_address = 0;
+   reg [11:0]                    next_x_address = 12'b0, next_y_address = 12'b0, result_address = 12'b0;
    reg [15:0]                    number_of_input_reads_needed = 16'd0;
    reg [1023:0]                   accumulated_inputs = 1024'd0;
    reg [15:0]                    weight_coef = 16'b0, input_coef = 16'b0;
@@ -36,29 +36,12 @@ module project(
    integer                                   number_of_mac_runs = 0;
    integer                                   mac_input_address = 0;
    integer                                   weight_bit_start_index = 0, saved_weight_bit_start_index = 0;
-   reg [11:0]                                result_address = 12'd0;
    reg                                       write_flag = 1'b0;
    reg clear_accumulation = 1'b0;
 
    reg [15:0]                                number_of_accumulated_input_bits = 16'b0;
    reg                                            setup_done = 1'b0;
    reg [2:0]                                      setup_count = 3'b0, mac_count = 3'b0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
    // top level sm
    localparam RESET_WAIT = 3'b000; // state 0
@@ -99,15 +82,14 @@ module project(
     */
    always@(*)
      begin
+        pause_flag = 1'b0;
+        main_state_machine_next_state = RESET_WAIT;
+        dut_busy = dut_busy;
         case(main_state_machine_current_state)
           RESET_WAIT:begin
-             // signal used to control reading from memory
              dut_busy = 1'b0;
+             pause_flag = 1'b1;
              main_state_machine_next_state = RUN_WAIT;
-             dut_sram_read_address = 0;
-             dut_wmem_read_address = 0;
-             result_address = 0;
-             dut_sram_write_address = 0;
           end
           RUN_WAIT: begin
              if(dut_run) // Message sent from top level module to indicate process start
@@ -118,7 +100,7 @@ module project(
              else
                begin
                   main_state_machine_next_state = RUN_WAIT;
-                  //dut_busy = 1'b0;
+                  dut_busy = dut_busy;
                end
           end
           SETUP: begin
@@ -142,7 +124,8 @@ module project(
           CHECK_DONE: begin
              if(input_input == 16'hFF)begin
                 main_state_machine_next_state = MAIN_STATE_END;
-             end
+                dut_busy = dut_busy;
+                end
              else begin
                 dut_busy = 1'b1;
                 main_state_machine_next_state = SETUP;
@@ -165,39 +148,42 @@ module project(
         dut_sram_write_enable <= 1'b0;
         case(main_state_machine_current_state)
           RESET_WAIT: begin
-             setup_count <= 0;
-             next_x_address <= dut_sram_read_address;
-             next_y_address <= dut_wmem_read_address;
+             // dut_sram_read_address <= 12'b0;
+             // result_address <= 12'b0;
+             // dut_sram_write_address <= 12'b0;
+             pause_flag <= 1'b0;
+             setup_count <= 3'b0;
+             result_address <= 12'b0;
+             next_x_address <= 12'b0;
+             next_y_address <= 12'b0;
              end
           SETUP: begin
-             next_x_address <= next_x_address;
-             next_y_address <= next_y_address;
              setup_count <= setup_count + 3'b1;
              setup_done <= 1'b0;
              if(setup_count == 3'b001)begin
-                weight_coef <= 0;
-                input_coef <= 0;
-                weight_coef_bits_read <= 0;
-                row_weight_bits_read <= 0;
+                weight_coef = 0;
+                input_coef = 0;
+                weight_coef_bits_read = 0;
+                row_weight_bits_read = 0;
                 number_of_rows_accumulated <= 0;
                 mac_count <= 0;
-                next_x_address <= dut_sram_read_address + 1'b1;
-                next_y_address <= dut_wmem_read_address + 1'b1;
+                next_x_address <= next_x_address + 1'b1;
+                next_y_address <= next_y_address + 1'b1;
                 accumulated_inputs <= 0;
              end
              if(setup_count == 3'b010)begin
                 number_of_inputs <= input_input;
                 weight_matrix_dimensions <= weight_input;
-                next_x_address <= dut_sram_read_address + 1'b1;
-                next_y_address <= dut_wmem_read_address + 1'b1;
+                next_x_address <= next_x_address + 1'b1;
+                next_y_address <= next_y_address + 1'b1;
              end
              if(setup_count == 3'b011)begin
                 size_of_inputs<= input_input;
                 size_of_weights<= weight_input;
-                next_x_address <= dut_sram_read_address + 1'b1;
+                next_x_address <= next_x_address + 1'b1;
              end
              if(setup_count == 3'b100)begin
-                next_x_address <= dut_sram_read_address + 1'b1;
+                next_x_address <= next_x_address + 1'b1;
                 weight_bits_per_row <= size_of_weights * weight_matrix_dimensions;
                 matrix_elements_needed <= weight_matrix_dimensions * weight_matrix_dimensions;
                 number_of_accumulated_input_bits <= size_of_inputs * number_of_inputs - 1'b1;
@@ -231,7 +217,7 @@ module project(
                 if(number_of_input_reads_needed > 0)begin
                    number_of_input_reads_needed <= number_of_input_reads_needed - 1'b1;
                    setup_count <= setup_count;
-                   next_x_address <= dut_sram_read_address + 1'b1;
+                   next_x_address <= next_x_address + 1'b1;
                 end
                 else begin
                    setup_done <= 1'b1;
@@ -242,10 +228,10 @@ module project(
              mac_count <= mac_count + 1;
              processing_done <= 1'b0;
              if(mac_count==3'b000) begin
-                current_weight_bits <= weight_input;
+                current_weight_bits = weight_input;
                 number_of_mac_runs <= 0;
                 weight_row_done <= 1'b0;
-                next_y_address <= dut_wmem_read_address + 1'b1;
+                next_y_address <= next_y_address + 1'b1;
                 if(size_of_weights==2)begin
                    weight_bit_start_index = 1;
                    elements_per_read = 5'd8;
@@ -262,7 +248,7 @@ module project(
                    weight_bit_start_index = 15;
                 end
                 saved_weight_bit_start_index = weight_bit_start_index;
-                mac_input_address <= number_of_accumulated_input_bits;
+                mac_input_address = number_of_accumulated_input_bits;
              end
              if(mac_count == 3'b011) begin
                 mac_count <= mac_count;
@@ -339,30 +325,24 @@ module project(
                      //product <= input_coef * weight_coef;
 
                      if(weight_coef_bits_read==12'd16)begin
-                        current_weight_bits <= weight_input;
-                        weight_coef_bits_read <= 0;
+                        current_weight_bits = weight_input;
+                        weight_coef_bits_read = 0;
                         weight_bit_start_index = saved_weight_bit_start_index;
                         matrix_elements_needed <= matrix_elements_needed - elements_per_read;
                         if(matrix_elements_needed>elements_per_read)begin
-                           next_y_address <= dut_wmem_read_address + 1;
+                           next_y_address <= next_y_address + 1;
                         end
                      end
                      if(write_flag == 1'b1)begin
                         write_flag <= 1'b0;
-                        dut_sram_write_data <= 1'b1;
                         dut_sram_write_enable <= 1'b1;
-                     end
-                     if(write_flag == 1'b1)begin
-                        write_flag <= 1'b0;
                         dut_sram_write_data <= value_to_write_to_golden_output;
-                        dut_sram_write_enable <= 1'b1;
                         dut_sram_write_address <= result_address;
-                        result_address <= result_address + 12'd1;
+                        result_address <= result_address + 12'h0001;
                      end
-                     if(write_flag == 1'b0)begin
+                     else if(write_flag == 1'b0)begin
                         dut_sram_write_enable <= 1'b0;
-                        dut_sram_write_data <= 0;
-                        result_address <= result_address;
+                        dut_sram_write_data <= 16'b0;
                      end
                      number_of_mac_runs <= number_of_mac_runs + 1;
 
@@ -377,16 +357,22 @@ module project(
      begin
         weight_input = wmem_dut_read_data;
         input_input = sram_dut_read_data;
-        dut_sram_read_address = next_x_address;
-        dut_wmem_read_address = next_y_address;
-        if(clear_accumulation == 1'b1)begin
-           clear_accumulation = 1'b0;
-           product = 0;
-           accumulation = 0;
-        end
-        else begin
-           accumulation = accumulation + product;
-        end
+        case(pause_flag)
+          1: begin
+             dut_sram_read_address = 12'b0;
+             dut_wmem_read_address = 12'b0;
+          end
+          0: begin
+             dut_sram_read_address = next_x_address;
+             dut_wmem_read_address = next_y_address;
+          end
+        endcase
+        // if(pause_flag == 1'b1)begin
+        //    end
+        // else begin
+        //    dut_sram_read_address = next_x_address;
+        //    dut_wmem_read_address = next_y_address;
+        //    end
      end
 
 
