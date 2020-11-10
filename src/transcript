@@ -7288,6 +7288,7 @@ do ./do-files/run.do
 # INFO::readmem : input_0/weight_sram.dat 
 # -------------------------------Round 0 start-------------------------------
 # 
+<<<<<<< Updated upstream
 # -------------------------------Round 0 check start-------------------------------
 # 
 # -------------------------------store results to g_result.dat-------------------------------
@@ -7333,4 +7334,10 @@ do ./do-files/run.do
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
+>>>>>>> Stashed changes
+=======
+run
+run
+# End time: 19:09:15 on Nov 06,2020, Elapsed time: 7:43:02
+# Errors: 0, Warnings: 1
 >>>>>>> Stashed changes
