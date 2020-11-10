@@ -7252,6 +7252,7 @@ do ./do-files/run.do
 #    Time: 196715 ps  Iteration: 1  Instance: /tb_top
 # 1
 # Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
+<<<<<<< Updated upstream
 =======
 run
 run
@@ -7260,4 +7261,70 @@ run
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
+>>>>>>> Stashed changes
+=======
+# Compile of ECE564MyDesign.v was successful with warnings.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful with warnings.
+# 3 compiles, 0 failed with no errors.
+do ./do-files/run.do
+# Compile of ECE564MyDesign.v was successful with warnings.
+# Compile of sram.sv was successful.
+# Compile of testbench_564.sv was successful with warnings.
+# 3 compiles, 0 failed with no errors.
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.tb_top
+# Loading work.sram
+# Loading work.ECE564MyDesign
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# -------------------------------start_simulation-------------------------------
+# 
+# INFO::readmem : input_0/input_sram.dat 
+# INFO::readmem : input_0/weight_sram.dat 
+# -------------------------------Round 0 start-------------------------------
+# 
+# -------------------------------Round 0 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 0 start compare -------------------------------
+# 
+# -------------------------------Round 0 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 96/96
+# computeCycle=2728
+# ---------------------------------------------------------------------------------
+# 
+# INFO::readmem : input_1/input_sram.dat 
+# INFO::readmem : input_1/weight_sram.dat 
+# -------------------------------Round 1 start-------------------------------
+# 
+# -------------------------------Round 1 check start-------------------------------
+# 
+# -------------------------------store results to g_result.dat-------------------------------
+# 
+# -------------------------------load results to output_array-------------------------------
+# 
+# -------------------------------load results to golden_output_array-------------------------------
+# 
+# -------------------------------Round 1 start compare -------------------------------
+# 
+# -------------------------------Round 1 Your report-------------------------------
+# 
+# Check 1 : Correct g results = 144/144
+# computeCycle=16840
+# ---------------------------------------------------------------------------------
+# 
+# ** Note: $finish    : C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv(228)
+#    Time: 196715 ps  Iteration: 1  Instance: /tb_top
+# 1
+# Break in Module tb_top at C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv line 228
+# End time: 18:00:25 on Nov 10,2020, Elapsed time: 3:20:22
+# Errors: 0, Warnings: 1
 >>>>>>> Stashed changes

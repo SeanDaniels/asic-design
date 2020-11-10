@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src
 vECE564MyDesign
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1605041589
+Z2 !s110 1605049214
 !i10b 1
 !s100 cgWFSUfW:o]Fz6FLBgYN:1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -21,13 +21,13 @@ R0
 w1605041586
 8ECE564MyDesign.v
 FECE564MyDesign.v
-!i122 143
+!i122 149
 L0 1 379
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1605041589.000000
+Z6 !s108 1605049214.000000
 !s107 sram.sv|ECE564MyDesign.v|C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv|
 Z7 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv|
 !i113 1
@@ -47,7 +47,7 @@ R0
 w1604070748
 8sram.sv
 Fsram.sv
-!i122 143
+!i122 149
 L0 4 90
 R5
 r1
@@ -69,10 +69,10 @@ IDDneY>hjFe[dWaN:V0M[22
 R4
 S1
 R0
-w1605035540
+w1605041678
 8C:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv
 FC:/Users/seanw/Desktop/projects/verilog-projets/asic-design/src/testbench_564.sv
-!i122 143
+!i122 149
 L0 3 229
 R5
 r1
